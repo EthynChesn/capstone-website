@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<head>
+<link rel="stylesheet" type="text/css" href = "../css-js/styles.css">
+<script src="../css-js/webscripts.js" defer></script>
+</head>
+
+<!--Body-->
+<title>GDScript & Godot - Video Game Development</title>
+
+<div class = "NavOpen"><img src = "../images/bars-solid-full.svg" onclick = openNav()></div>
+<div class = "homebtn"><img src = "../images/house-solid-full.svg" onclick = 'window.location.href = "../index.html"'></div>
+
+<h1>
+<a href='https://docs.godotengine.org/en/stable/../index.html' target = "_blank" rel="noopener noreferrer"><img src="../images/gd_docs-logo.png" align = "center" style="width: 5%;"></a>
+GDScript Language & Godot Engine
+<a href="https://godotengine.org/" target = "_blank" rel="noopener noreferrer"><img src="../images/godot-logo.png" align = "center" style="width: 6%;"></a>
+</h1>
+
+<br>
+
+<div style="margin-left:32.5%">
+<button class="tablink" onclick="openPage('About',this)" id="defaultOpen">About</button>
+<button class="tablink" onclick="openPage('Demos',this)">Demos</button>
+</div>
+
+<br><br>
+
+<div id="About" class="tabcontent">
+
+<div id="AboutSideNav" class="sidenav">
+  <div class = "navbox">
+  <a class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#introduction">Introduction</a>
+  <a href="#prosandcons">Pros and Cons</a>
+  <a href="#conclusion">Conclusion</a>
+  <a href="../index.html"><img src="../images/house-solid-full.svg" style="width: 20%;"></a>
+  </div>
+</div>
+
+<br>
+<h2 id="introduction">Introduction:</h2>
+
+<p>
+GDScript is the primary language used for programming games in the Godot engine. 
+While the engine supports C#, GDScript is designed to use fewer and simpler lines of code to accomplish the same tasks. 
+Since it was made for the engine, it is the language with the most support. 
+Game developers experienced in C# may want to use that instead for the sake of not having to learn GDScript, 
+but GDScript is simple to learn and any programmer that knows Python is likely to be able to jump into GDScript right away, 
+as it was designed to have similar syntax to Python. C# is faster with raw calculations, and GDScript is faster at accessing Godot’s internal engine functions.
+</p>
+
+<div><br><hr class="divider"><br></div>
+<h2 id="prosandcons">Pros and Cons:</h2>
+
+<h3>Pros:</h3>
+
+<ul>
+<li>GDScript is simple to learn and use: <ul><li>It is a sufficient language for much of development done on Godot, C# will take more time to learn.</li></ul></li> 
+<li>The learning curve is easy: <ul><li>Learning to use the engine and the technology is less complicated than other popular engines.</li></ul></li>
+<li>Includes many features: <ul><li>Many features a game developer would want for creating a game, even to professional standards.</li></ul></li>
+<li>Godot is completely free: <ul><li>It has no licensing that requires royalties or any sort of fees.</li></ul></li>
+<li>Godot is a lightweight engine: <ul><li> The download for the engine is very small and quick, and can be run on less powerful machines.</li></ul></li>
+<li>Supports 2D and 3D games: <ul><li>Support for the 2D engine is the strongest, but the 3D engine is still powerful.</li></ul></li>
+<li>Godot is open source and can be fully modified to fit the needs of a developer.</li>
+<li>Projects can be easily ported across all major platforms.</li>
+</ul>
+
+<br>
+
+<h3>Cons:</h3>
+
+<ul>
+<li>The engine is behind technologically: <ul><li>Compared to other engines, a large enough professional studio would find it lacking for high budget titles.</li></ul></li>
+<li>3D support is lacking: <ul><li>Its 3D rendering, animations, and physics are not up to par with other engines.</li></ul></li>
+<li>Godot has a small asset library: <ul><li>It has fewer contributions compared to the asset stores of other engines.</li></ul></li>
+<li>C# has room for improvement: <ul><li>Using strictly C# means certain features not being available or poor performance, and the Code doesn't recompile until the project is run.</li></ul></li>
+</ul>
+
+<div><br><hr class="divider"><br></div>
+
+<h2 id="conclusion">Conclusion:</h2>
+
+<p>
+Godot is a solid platform for any developer or team wanting to create a 2D game with ease and simplicity. 
+For the 3D engine, the use cases are limited to smaller teams and independent developers wanting to create a lower budget 3D game. It is insufficient for larger, 
+professional teams that expect a game that has high-quality graphics while maintaining acceptable performance. 
+It would not be suitable for competitive games that require quick reactions and fluid feedback to player input.
+</p>
+<p>
+It is a good alternative to Roblox for learning game development, 
+because it follows the standard design of a game engine compared to Roblox. It has no pre-existing style or playerbase, 
+so the games you make are going to be that much more unique. Godot projects can be published on any game store and isn’t bound to a specific platform unlike Roblox. 
+Projects start essentially from scratch meaning the developers need to be able cover all logic and movement. 
+It provides a lot of functions and Nodes to assist with development. There are trade-offs, and Roblox still has its merits for certain use cases. 
+If a developer has fewer experience with certain aspects of development, Godot will be more difficult to create a finished game with, 
+but for a team that has developers with all the needed skills, Godot is a better choice for building skills and projects that are more relevant across the industry.
+</p>
+
+<div><br><br></div>
+
+</div>
+
+
+<div id="Demos" class="tabcontent">
+
+<div id="DemosSideNav" class="sidenav">
+  <div class = "navbox">
+  <a class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#demo1">Demo #1 - Top-Down 2D Player Movement</a>
+  <a href="#demo2">Demo #2 - Third-Person 3D Player Movement</a>
+  <a href="../index.html"><img src="../images/house-solid-full.svg" style="width: 20%;"></a>
+  </div>
+</div>
+
+<br>
+<h2>Demos:</h2>
+
+<br>
+
+<h3 id="demo1">Demo #1 - Basic Top-Down 2D Player Movement:</h3>
+
+<p>
+Starting with a blank Godot project, I set up the two scenes that will be needed for this demo.
+The first scene I called "main". This will be the "playing" area of the project that the Player will move around in.
+The second scene I called "player". This scene will be used for everything needed for the player.
+The Node I selected for the main Node of the player scene is a "CharacterBody2D", which has a "CollisionShape2D" Node underneath it to define collision,
+and a "Sprite2D" Node which is where we can put the Player's actual visible texture. 
+For the sake of simplicity for this demo, I'm using the default "icon.svg" file as a placeholder for a real player sprite.
+Since this "sprite" has a square shape, I have set the CollisionShape2D a square shape as well, which covers the player sprite.
+Collision won't be used in this demo, but the editor will label the CharacterBody2D Node with a warning, so it might as well be included.
+</p>
+
+<br>
+
+<img src="../images/player_scene.png" style="width: 50%;">
+
+<div><br></div>
+
+<p>
+The next step is to create movement inputs in the InputMap section of the Project settings. 
+I've named them "move_left", "move_right", "move_up", and "move_down", then I mapped each one to their respective "WASD" inputs.
+You could also choose to use the arrow keys instead, or add them as additional inputs and use both schemes.
+</p>
+
+<br>
+
+<img src="../images/input_map.png" style="width: 70%;">
+
+<div><br></div>
+
+<p>
+Now for coding the Player movement itself. I attached a new script to the CharacterBody2D Node, 
+and included the following line at the top of the script:
+</p>
+
+<pre class="andromeeda" style="background-color:#23262E;color:#D5CED9" tabindex="0"><code><div class="line"><span style="color:#C74DED">extends</span><span style="color:#FFE66D"> CharacterBody2D</span></div></code></pre>
+
+<br>
+
+<p>Next, I initialized some variables that will be used in the script. </p>
+
+<pre class="andromeeda" style="background-color:#23262E;color:#D5CED9" tabindex="0"><code><div class="line"><span style="color:#C74DED">var</span><span style="color:#00E8C6"> screen_size</span></div><div class="line"><span style="color:#A0A1A7CC">## The keyword '@export' is used so that the variable can be changed in the editor without touching any code.</span></div><div class="line"><span style="color:#FFE66D">@export</span><span style="color:#C74DED"> var</span><span style="color:#00E8C6"> speed</span><span style="color:#EE5D43"> =</span><span style="color:#F39C12"> 400</span></div></code></pre>
+
+<br>
+
+<p>The following function is called when the Node and its children enter the scene. Here it's used to get the size of the player's screen.</p>
+
+<pre class="andromeeda" style="background-color:#23262E;color:#D5CED9" tabindex="0"><code><div class="line"><span style="color:#C74DED">func</span><span style="color:#FFE66D"> _ready</span><span style="color:#D5CED9">():</span></div><div class="line"><span style="color:#00E8C6">	screen_size</span><span style="color:#EE5D43"> =</span><span style="color:#FFE66D"> get_viewport_rect</span><span style="color:#D5CED9">().</span><span style="color:#00E8C6">size</span></div></code></pre>
+
+<br>
+
+<p>Lastly, the following function will be called each frame prior to rendering. The actual movement code is handled here.</p>
+
+<pre class="andromeeda" style="background-color:#23262E;color:#D5CED9" tabindex="0"><code><div class="line"><span style="color:#C74DED">func</span><span style="color:#FFE66D"> _process</span><span style="color:#D5CED9">(</span><span style="color:#00E8C6">delta</span><span style="color:#D5CED9">):</span></div><div class="line"><span style="color:#A0A1A7CC">	## Set the Player velocity to (0.0, 0.0)</span></div><div class="line"><span style="color:#00E8C6">	velocity</span><span style="color:#EE5D43"> =</span><span style="color:#FFE66D"> Vector2</span><span style="color:#D5CED9">.</span><span style="color:#EE5D43">ZERO</span><span style="color:#D5CED9">		</span></div><div class="line"><span style="color:#A0A1A7CC">	## Get a normalized vector of the four movement Inputs</span></div><div class="line"><span style="color:#C74DED">	var</span><span style="color:#00E8C6"> direction</span><span style="color:#EE5D43"> =</span><span style="color:#FFE66D"> Input</span><span style="color:#D5CED9">.</span><span style="color:#FFE66D">get_vector</span><span style="color:#D5CED9">(</span><span style="color:#96E072">"move_right"</span><span style="color:#D5CED9">,</span><span style="color:#96E072">"move_left"</span><span style="color:#D5CED9">,</span><span style="color:#96E072">"move_up"</span><span style="color:#D5CED9">,</span><span style="color:#96E072">"move_down"</span><span style="color:#D5CED9">)</span></div><div class="line"><span style="color:#A0A1A7CC">	## Set player velocity to the given speed in the direction of the Input</span></div><div class="line"><span style="color:#00E8C6">	velocity</span><span style="color:#EE5D43"> =</span><span style="color:#00E8C6"> direction</span><span style="color:#EE5D43"> *</span><span style="color:#00E8C6"> speed</span></div><div class="line"><span style="color:#A0A1A7CC">	## Get Player position, and clamp the Position to minimum vector coordinates</span></div><div class="line"><span style="color:#00E8C6">	position</span><span style="color:#EE5D43"> +=</span><span style="color:#00E8C6"> velocity</span><span style="color:#EE5D43"> *</span><span style="color:#00E8C6"> delta</span></div><div class="line"><span style="color:#00E8C6">	position</span><span style="color:#EE5D43"> =</span><span style="color:#00E8C6"> position</span><span style="color:#D5CED9">.</span><span style="color:#FFE66D">clamp</span><span style="color:#D5CED9">(</span><span style="color:#FFE66D">Vector2</span><span style="color:#D5CED9">.</span><span style="color:#EE5D43">ZERO</span><span style="color:#D5CED9">, </span><span style="color:#00E8C6">screen_size</span><span style="color:#D5CED9">)</span></div></code></pre>
+
+<br>
+
+<p>Now, to test if everything works. In order for the player to function, I had to initialize the player scene itself as a child of the main Node of the main scene from earlier.
+</p>
+
+<br>
+
+<video width = "60%" height = "400" controls>
+    <source src="../videos/godot_2D.mp4">
+</video>
+
+<div><br><br><br></div>
+
+<h3 id="demo2">Demo #2 - Basic Third-Person 3D Player Movement:</h3>
+
+<p>
+This demo is similar to the previous one, but in 3D. As such, setting up the Main scene is a lot more involved and there are more complicates.
+Firstly, since the 3D space is an open void, the "backdrop" does not act as a suitable ground for the Player to move around on.
+Secondly, a Camera Node that is set up to view the Player as well as follow along with their movement is needed.
+Lastly, the movement and inputs are essentially the same, but the X and Z axis need to be accounted for horizontal movement seperately from vertical movement
+which takes place in the form of a jump action, which requires an addtional input which I called "jump", and I mapped it to Spacebar, as well as gravity which is constant and
+passive.
+</p>
+
+<br>
+
+<p>
+Starting with the Main Scene, I set the main Node as a generic Node. Underneath I created a StaticBody3D Node which will be used as the "Ground" object.
+Of course, this Node alone is not enough for a physical ground. It needs a CollisionShape3D Node to create the collision box, and I set its size to (60.0,2.0,60.0).
+It also needs a MeshIntance3D with a BoxMesh for the visible aspect of the Ground, set to the same size as the collision box.
+Another Node that needs to be underneath the main Node is a DirectionalLight3D Node so that the scene isn't dark. I Manipulated the rotation of the light until it illuminated
+the Ground.
+</p>
+
+<img src="../images/Main_Scene.png">
+
+<div><br></div>
+
+<p>
+Now for the Player scene. For the main Node, I selected CharacterBody3D, and underneath that a Node3D to hold the character model.
+Unlike 2D, Godot doesn't provide a default 3D model in the project folder, so I downloaded assets from the tutorial within their documentation and downloaded Blender
+so that I could import that model into my project and place it within the Node3D under the Player Node. Finally, I added a CollisionShape3D with the Sphere shape 
+to create a roughly accurate collision bubble around the Player. I also made sure that the bottom of the Collision lies along the "floor" grid to prevent the player
+from slightly hovering above or partially clipping under the ground.
+</p>
+
+<img src="../images/3D_Player.png" style="width: 60%">
+
+<div><br></div>
+
+<p>The next part is scripting the Player movement itself:</p>
+
+<pre class="andromeeda" style="background-color:#23262E;color:#D5CED9" tabindex="0"><code><div class="line"><span style="color:#C74DED">extends</span><span style="color:#FFE66D"> CharacterBody3D</span></div><div class="line">
+</div><div class="line"><span style="color:#A0A1A7CC">## Initialize some variables that are once again exported</span></div><div class="line"><span style="color:#FFE66D">@export</span><span style="color:#C74DED"> var</span><span style="color:#00E8C6"> speed</span><span style="color:#EE5D43"> =</span><span style="color:#F39C12"> 14</span></div><div class="line"><span style="color:#FFE66D">@export</span><span style="color:#C74DED"> var</span><span style="color:#00E8C6"> fall_acceleration</span><span style="color:#EE5D43"> =</span><span style="color:#F39C12"> 75</span></div><div class="line"><span style="color:#FFE66D">@export</span><span style="color:#C74DED"> var</span><span style="color:#00E8C6"> jump_impulse</span><span style="color:#EE5D43"> =</span><span style="color:#F39C12"> 20</span><span style="color:#D5CED9">	</span></div><div class="line">
+</div><div class="line"><span style="color:#A0A1A7CC">## This variable will for calculating the velocity that the player should be attemtping to reach</span></div><div class="line"><span style="color:#C74DED">var</span><span style="color:#00E8C6"> target_velocity</span><span style="color:#EE5D43"> =</span><span style="color:#FFE66D"> Vector3</span><span style="color:#D5CED9">.</span><span style="color:#EE5D43">ZERO</span></div></code></pre>
+
+<br>
+
+<p>Next, the _physics_property() function which works similar to _process() but is better suited for handling physics.</p>
+
+<pre class="andromeeda" style="background-color:#23262E;color:#D5CED9" tabindex="0"><code><div class="line"><span style="color:#C74DED">func</span><span style="color:#FFE66D"> _physics_process</span><span style="color:#D5CED9">(</span><span style="color:#00E8C6">delta</span><span style="color:#D5CED9">):</span></div><div class="line"><span style="color:#A0A1A7CC">	## This vector is in 2D, technically (X,Y) but Y will be used as Z in the 3D Vector</span></div><div class="line"><span style="color:#C74DED">	var</span><span style="color:#00E8C6"> direction</span><span style="color:#EE5D43"> =</span><span style="color:#FFE66D"> Input</span><span style="color:#D5CED9">.</span><span style="color:#FFE66D">get_vector</span><span style="color:#D5CED9">(</span><span style="color:#96E072">"move_left"</span><span style="color:#D5CED9">,</span><span style="color:#96E072">"move_right"</span><span style="color:#D5CED9">,</span><span style="color:#96E072">"move_forward"</span><span style="color:#D5CED9">,</span><span style="color:#96E072">"move_back"</span><span style="color:#D5CED9">)</span></div><div class="line"><span style="color:#A0A1A7CC">	## Convert to a 3D vector to map the horizontal movement inputs with the X and Z directions, Y=0</span></div><div class="line"><span style="color:#00E8C6">	direction</span><span style="color:#EE5D43"> =</span><span style="color:#FFE66D"> Vector3</span><span style="color:#D5CED9">(</span><span style="color:#00E8C6">direction</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">x</span><span style="color:#D5CED9">, </span><span style="color:#F39C12">0</span><span style="color:#D5CED9"> , </span><span style="color:#00E8C6">direction</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">y</span><span style="color:#D5CED9">)</span></div><div class="line"><span style="color:#D5CED9">	</span></div><div class="line"><span style="color:#A0A1A7CC">	## Handle the "jump" action and manipulate vertical velocity respectively</span></div><div class="line"><span style="color:#C74DED">	if</span><span style="color:#FFE66D"> Input</span><span style="color:#D5CED9">.</span><span style="color:#FFE66D">is_action_pressed</span><span style="color:#D5CED9">(</span><span style="color:#96E072">"jump"</span><span style="color:#D5CED9">) </span><span style="color:#EE5D43">and</span><span style="color:#FFE66D"> is_on_floor</span><span style="color:#D5CED9">():</span></div><div class="line"><span style="color:#00E8C6">		target_velocity</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">y</span><span style="color:#EE5D43"> =</span><span style="color:#00E8C6"> jump_impulse</span></div><div class="line"><span style="color:#D5CED9">	</span></div><div class="line"><span style="color:#A0A1A7CC">	## Control the 3D direction that the Player model is facing</span></div><div class="line"><span style="color:#C74DED">	if</span><span style="color:#00E8C6"> direction</span><span style="color:#EE5D43"> !=</span><span style="color:#FFE66D"> Vector3</span><span style="color:#D5CED9">.</span><span style="color:#EE5D43">ZERO</span><span style="color:#D5CED9">:</span></div><div class="line"><span style="color:#C74DED">		$</span><span style="color:#EE5D43">Pivot</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">basis</span><span style="color:#EE5D43"> =</span><span style="color:#FFE66D"> Basis</span><span style="color:#D5CED9">.</span><span style="color:#FFE66D">looking_at</span><span style="color:#D5CED9">(</span><span style="color:#00E8C6">direction</span><span style="color:#D5CED9">)</span></div><div class="line"><span style="color:#D5CED9">		</span></div><div class="line"><span style="color:#A0A1A7CC">		## Set the velocity as a set speed towards the correct directions</span></div><div class="line"><span style="color:#00E8C6">		target_velocity</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">x</span><span style="color:#EE5D43"> =</span><span style="color:#00E8C6"> direction</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">x</span><span style="color:#EE5D43"> *</span><span style="color:#00E8C6"> speed</span></div><div class="line"><span style="color:#00E8C6">		target_velocity</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">z</span><span style="color:#EE5D43"> =</span><span style="color:#00E8C6"> direction</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">z</span><span style="color:#EE5D43"> *</span><span style="color:#00E8C6"> speed</span></div><div class="line"><span style="color:#D5CED9">		 </span></div><div class="line"><span style="color:#A0A1A7CC">		## Calculate constant, passive gravity as long as the player is in the air</span></div><div class="line"><span style="color:#C74DED">		if</span><span style="color:#EE5D43"> not</span><span style="color:#FFE66D"> is_on_floor</span><span style="color:#D5CED9">():</span></div><div class="line"><span style="color:#00E8C6">			target_velocity</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">y</span><span style="color:#EE5D43"> =</span><span style="color:#00E8C6"> target_velocity</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">y</span><span style="color:#EE5D43"> -</span><span style="color:#D5CED9"> (</span><span style="color:#00E8C6">fall_acceleration</span><span style="color:#EE5D43"> *</span><span style="color:#00E8C6"> delta</span><span style="color:#D5CED9">)</span></div><div class="line"><span style="color:#D5CED9">		</span></div><div class="line"><span style="color:#A0A1A7CC">		## Move the player</span></div><div class="line"><span style="color:#00E8C6">		velocity</span><span style="color:#EE5D43"> =</span><span style="color:#00E8C6"> target_velocity</span></div><div class="line"><span style="color:#FFE66D">		move_and_slide</span><span style="color:#D5CED9">()</span></div></code></pre>
+
+<br>
+
+<p>This code has similarities to the previous Demo, but needs to take an additional dimension into account as well as gravity and a "jump" action.</p>
+
+<br>
+
+<p>
+Now that player movement is coded, there is still one more major part of this demo. 
+Before that, the Player scene needs to be initialized as a Node within the main scene.</p>
+
+<p>I added a Marker3D Node underneath the Player Node. This Node will serve the purpose of rotating the Camera to find the best angle.
+Underneath that, I created a Camera3D Node which needs to be moved to a suitable place in combination with the Marker3D's rotation to get a preffered view of the Player. 
+Since the Camera is not scripted, it won't rotate or move with the player's movement to maintain this exact view, 
+having the Camera as a child of the Player Node in the main scene will at least allow it to move as such that the Camera's distance from the Player will stay the same.
+</p>
+
+<img src="../images/Camera_Player.png" style="width: 65%">
+
+<div><br></div>
+
+<p>With the main and player scenes set up, the movement coded, and the Third-Person Camera in place, everything can be playtested together.</p>
+
+<video width = "60%" height = "400" controls>
+    <source src="../videos/godot_3D.mp4">
+</video>
+
+<div><br><br></div>
+
+</div>
+
+<button type="button" class="top" onclick="window.location.href='#';">Back to Top</button>

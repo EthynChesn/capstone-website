@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+
+<head>
+<link rel="stylesheet" href = "../css-js/styles.css">
+<title>Luau & Roblox - Video Game Development</title>
+<script src="../css-js/webscripts.js" defer></script>
+</head>
+
+<!--Body-->
+<div class = "NavOpen"><img src = "../images/bars-solid-full.svg" onclick = openNav()></div>
+<div class = "homebtn"><img src = "../images/house-solid-full.svg" onclick = 'window.location.href = "../index.html"'></div>
+<h1>
+<a href='https://luau.org/' target = "_blank" rel="noopener noreferrer"><img src="../images/Luau_logo.png" align = "center" style="width: 5%;"></a>
+Luau Language & Roblox Studio Engine/Platform
+<a href="https://create.roblox.com/docs" target = "_blank" rel="noopener noreferrer"><img src="../images/Studio_logo.png" align = "center" style="width: 4%;"></a>
+</h1>
+
+<br>
+
+<div style="margin-left:32.5%">
+<button class="tablink" onclick="openPage('About',this)" id="defaultOpen">About</button>
+<button class="tablink" onclick="openPage('Demos',this)">Demos</button>
+</div>
+
+<br><br>
+
+
+<div id="About" class="tabcontent">
+
+<div id="AboutSideNav" class="sidenav">
+  <div class = "navbox">
+  <a class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#introduction">Introduction</a>
+  <a href="#prosandcons">Pros and Cons</a>
+  <a href="#conclusion">Conclusion</a>
+  <a href="../index.html"><img src="../images/house-solid-full.svg" style="width: 20%;"></a>
+  </div>
+</div>
+
+<br>
+<h2 id="introduction">Introduction:</h2>
+
+<p>Luau is a fork of Lua created by the Roblox Corporation for use in Roblox Studio development. In 2021 Luau was made open source under the MIT liscense.</p>
+<p>
+The primary focuses of Luau are performance and sandboxing, which is a security technique that keeps a program in a restricted environment with 
+controlled access to resources, similar to virtualization, to prevent harm to the machine and its operating system. 
+It's also designed to be embeddable like Lua, which means that it can be integrated into software to extend its functionality without having to write lower level code. 
+</p>
+<p>
+It is based on Lua 5.1, but it borrows some features introduced in Lua 5.2+ that don’t break compatibility
+and are deemed as a useful and logical addition to the language. It also adds functionality not seen in base Lua such as compound assignments, 
+continue statements, and type annotations.
+</p>
+<p>
+As a scripting language, Luau is simple to learn. Since Luau is open source and embeddable, 
+it’s not beyond the realm of possibility to use for a project outside of Roblox. 
+However, Luau is at its strongest when paired with Roblox Studio, the development client used for creating Roblox games. 
+</p>
+
+<div><br><hr class="divider"><br></div>
+
+<h2 id="prosandcons">Pros and Cons:</h2>
+
+
+<h3>Pros:</h3>
+
+
+<ul>
+    <li>Roblox Studio is relatively easy and quick to learn to start producing functioning games:
+        <ul>
+            <li>
+            It has all sorts of built-in and premade features and functionalities allow you to jump into the ideas you want to make 
+            instead of having headaches over fundamental groundwork, while still allowing you to disable and replace those defaults 
+            with your own custom versions further down the road if you choose, i.e. physics engine, terrain, Player model.
+            </li>
+        </ul>
+    </li>
+    <li>
+    Roblox as a platform comes with a pre-existing large audience of Players that can discover and play your games:
+        <ul>
+            <li>
+            The website/app has a "Charts" page full of games sorted by different metrics such as Top-Trending. Players can also search for games by name,
+            and see what game their friends are currently playing. The home page contains recommended games as well as a Continue section that shows recently played games.  
+            </li>
+        </ul>
+    </li>
+    <li>
+    Roblox has an economy of “Robux” currency that Players can use to spend on digital products:
+        <ul>
+            <li>
+            It has a large marketplace of community made products, allowing you to create products that go along with your game. 
+            There is also an developer store full of assets that other developers have made and shared which you can also upload to. 
+            If you write plugins/modules, you can choose to sell them. 
+            </li>
+            <li>
+            Potentially, you can make a profit off of your game/product sales,
+            due to the Developer Exchange program that allows eligible developers to convert earned Robux into real money. 
+            </li>
+        </ul>
+    </li>
+    <li>
+    Roblox has a community of developers you can interact with: 
+    <ul>
+        <li>
+        You can find other development teams to work with or work for, 
+        which is something that developers often do to earn money through development as opposed to earning robux from game/product sales. 
+        Most of this interaction occurs on the official Roblox Developer Forums, 
+        but serious communication will usually end up off-platform on other social media like Discord.
+        </li>
+    </ul>
+    </li>
+    <li>Cross-platform compatibility for games on the platform is nearly seamless due to the provided functionality, and built-in features.</li>
+</ul>
+
+<br>
+
+<h3>Cons:</h3>
+
+
+<ul>
+    <li>
+    Default systems aren’t always the best quality/efficient solution:
+        <ul>
+            <li>
+            If you want something to your standards in certain situations you will have to modify the code and know what you’re doing/how it works to an extent 
+            where you can modify what you need and get it to work. Worst case scenario, you rewrite the entire thing.
+            If you’re lucky, someone else has already created a script or module that does what you need. 
+            </li>
+        </ul>
+    </li>
+    <li>
+    Roblox is a pre-existing platform with a long history:
+        <ul>
+            <li>
+            It has a specific style and feel that persists across most games on the platform. 
+            Creating something entirely unique that stands out requires a lot of time and knowledge because it requires replacing nearly every built-in system 
+            including the Player models and physics engine. 
+            Games like these end up being niche and don’t remain relevant for very long, 
+            partially due to a lack of continued updates to the game since it is already so difficult to reach launch at all.
+            </li>
+        </ul>
+    </li>
+    <li>
+    A professional company has resources and experience, the knowledge required is specific to Roblox:
+        <ul>
+            <li>
+            Unless a team of established and skilled Roblox developers is gathered, 
+            there will be an overhead of time and money spent just learning and experimenting with the engine where other engines 
+            have more developers proficient with them.
+            </li>
+        </ul>
+    </li>
+    <li>
+    Roblox does not give full creative control due to policies:
+        <ul>
+            <li>
+            All published content on the platform must follow these rules.
+            This is due to a wide audience of varied ages using the platform, especially children.
+            Other game engines do not require the same precautions and have little restrictions on the content that can be produced with them. This is important
+            for a development team that wants to create games with adult themes.
+            </li>
+        </ul>
+    </li>
+    <li>
+    Earning a profit on Roblox is more difficult than the company would make it seem:
+        <ul>
+            <li>
+            The first barrier is creating a publishing a game that will catch enough attention to warrant Players spending Robux on in-game purchases. 
+            You can make your game paid access, but that makes it more difficult to get a sizable following of active Players.
+            </li>
+            <li>
+            The second barrier is that Roblox takes a sizable cut of everything that you earn. More than most other platforms. 
+            For every sale, Roblox gives you 70% of the total price, which is standard, but 
+            Developers must use the exchange program called "DevEx" to convert Robux into real money. 
+            The minimum exchange amount is 30,000 Robux, which only converts into about a third of the USD that it would cost to buy that amount of Robux.
+        </ul>
+    </li>
+</ul>
+
+<div><br><hr class="divider"><br></div>
+
+<h2 id="conclusion">Conclusion:</h2>
+
+<p>
+Roblox is a good platform for learning video game development and smaller scale projects.
+It is not viable for a professional team wanting to create a quality game with a wide array of ideas for a type of game 
+they want to create. Brands that are not built on the platform are investing into the platform in the form of purchasing existing small-scale games 
+that fit a trend that is high-earning on the platform. These games are lower effort and easy to produce in high numbers.
+They are consumed primarily by children on the platform and Roblox influencers. Both of which have a lower inhibition for spending their Robux on in-game products. 
+These games are not the kind of high quality, high-standard games that a video game development company would expect to produce. 
+While it’s possible to use the engine for those projects with the aforementioned hurdles and limitations, 
+it is not going to be something that's profits compared to other games being released on the platform.
+</p>
+<p>
+As for Luau as a scripting language, it’s easy to learn and great to use on Roblox, 
+but you might be using a more complex programming language for projects on other engines.
+<span style="font-size: 14px; font-weight: bold; font-style: italic">
+    Note: Lua/Luau can be embedded into some of these engines using third-party plugins, 
+    but as a higher-level scripting layer that interacts with deeper code i.e for simple modding support. 
+    Technically, this is how Luau works with Roblox as well as the engine is programmed using C++ but that API is not exposed for developers.</span>
+</p>
+<p>
+If you use Luau for video game development outside of Roblox, you may be embedding it yourself into another engine 
+or using a non-Roblox engine that primarily uses Luau for development.
+</p>
+
+<div><br><br></div>
+
+</div>
+
+<div id="Demos" class="tabcontent">
+
+<div id="DemosSideNav" class="sidenav">
+  <div class = "navbox">
+  <a class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#demo1">Demo #1 - Collectible Coins</a>
+  <a href="#demo2">Demo #2 - Toolbox and Generate Rig</a>
+  <a href="#demo3">Demo #3 - Sprinting System</a>
+  <a href="../index.html"><img src="../images/house-solid-full.svg" style="width: 20%;"></a>
+  </div>
+</div>
+
+<br>
+<h2>Demos:</h2>
+
+<br>
+
+<h3 id="demo1">Demo #1 - Collectible Coins:</h3>
+
+<p>
+This demo contains a basic system where the Player can collect physical coin objects from the game world, which will then be added to the Player's coin
+balance. This coin balance is shown on the game's leaderboard system as well as a UI element that displays how many coins the Player has.
+</p>
+<p>Firstly, I've added a new Part into the Workspace, and changed its shape property to Cylinder and resized into a flat coin object.</p>
+<img src="../images/Coin_Object.png">
+
+<br>
+ 
+<p>With the Part for the coin created, I've inserted a Script into the Part as its child, and wrote the code that allows the Coin to be collected by a Player</p>
+
+<pre class="andromeeda" style="background-color:#23262E;color:#D5CED9" tabindex="0"><code><div class="line">
+</div><div class="line"><span style="color:#A0A1A7CC">--Define the "Coin Part" (parent of the script) as a variable in the script</span></div><div class="line"><span style="color:#C74DED">local</span><span style="color:#00E8C6"> Coin</span><span style="color:#EE5D43"> =</span><span style="color:#00E8C6"> script</span><span style="color:#D5CED9">.Parent</span></div><div class="line">
+</div><div class="line"><span style="color:#A0A1A7CC">--Define the Coin Event as a variable, a RemoteEvent (think of it as a trigger between Server and Client) stored in "ReplicatedStorage"</span></div><div class="line"><span style="color:#00E8C6">CoinEvent</span><span style="color:#EE5D43"> =</span><span style="color:#D5CED9"> game:</span><span style="color:#FFE66D">GetService</span><span style="color:#D5CED9">(</span><span style="color:#96E072">"ReplicatedStorage"</span><span style="color:#D5CED9">).CoinEvent</span></div><div class="line">
+</div><div class="line">
+</div><div class="line"><span style="color:#A0A1A7CC">--Detect the Coin being touched, and check that the part touching it belongs to a Player. </span></div><div class="line"><span style="color:#A0A1A7CC">	--InstanceName:IsA("ClassName")</span></div><div class="line"><span style="color:#A0A1A7CC">--Fire the Coin Event at the Player's Client. Send "1" as the amount of Coins to add. </span></div><div class="line"><span style="color:#A0A1A7CC">	--RemoteEvent:FireClient(Target, Any)</span></div><div class="line"><span style="color:#A0A1A7CC">--Destroy the Coin object itself so that it can't be collected multiple times</span></div><div class="line"><span style="color:#A0A1A7CC">	--InstanceName:Destroy()</span></div><div class="line">
+</div><div class="line"><span style="color:#00E8C6">Coin</span><span style="color:#D5CED9">.Touched:</span><span style="color:#FFE66D">Connect</span><span style="color:#D5CED9">(</span><span style="color:#C74DED">function</span><span style="color:#D5CED9">(</span><span style="color:#00E8C6">hit</span><span style="color:#D5CED9">)</span></div><div class="line"><span style="color:#C74DED">	local</span><span style="color:#00E8C6"> Player</span><span style="color:#EE5D43"> =</span><span style="color:#00E8C6"> game</span><span style="color:#D5CED9">.Players:</span><span style="color:#FFE66D">GetPlayerFromCharacter</span><span style="color:#D5CED9">(</span><span style="color:#00E8C6">hit</span><span style="color:#D5CED9">.Parent)</span></div><div class="line"><span style="color:#C74DED">	if</span><span style="color:#00E8C6"> Player</span><span style="color:#C74DED"> then</span></div><div class="line"><span style="color:#D5CED9">		CoinEvent:</span><span style="color:#FFE66D">FireClient</span><span style="color:#D5CED9">(</span><span style="color:#00E8C6">Player</span><span style="color:#D5CED9">, </span><span style="color:#F39C12">1</span><span style="color:#D5CED9">)</span></div><div class="line"><span style="color:#D5CED9">		Coin:</span><span style="color:#FFE66D">Destroy</span><span style="color:#D5CED9">()</span></div><div class="line"><span style="color:#C74DED">	end</span></div><div class="line"><span style="color:#C74DED">end</span><span style="color:#D5CED9">)</span></div><div class="line">
+</div><div class="line">
+</div></code></pre>
+
+<br>
+
+<p>
+With the Coin object itself coded, I inserted a LocalScript, which is a client only Script, into the StarterPlayerScripts Folder, which are Scripts that get inserted
+into the Player when they join the game. In this LocalScript, I wrote the code for the main part of the Coin system that allows the Player to actually receive and store
+the coins they collect.
+</p>
+
+<pre class="andromeeda" style="background-color:#23262E;color:#D5CED9" tabindex="0"><code><div class="line"><span style="color:#A0A1A7CC">--Declare Coin Event once again on the Client script</span></div><div class="line"><span style="color:#00E8C6">CoinEvent</span><span style="color:#EE5D43"> =</span><span style="color:#D5CED9"> game:</span><span style="color:#FFE66D">GetService</span><span style="color:#D5CED9">(</span><span style="color:#96E072">"ReplicatedStorage"</span><span style="color:#D5CED9">).CoinEvent</span></div><div class="line">
+</div><div class="line"><span style="color:#A0A1A7CC">--This would usually be handled in a server script that deals with saved data, but that is beyond the scope of this demo</span></div><div class="line"><span style="color:#A0A1A7CC">	--Create a folder named leaderstats and define the Local Player as its parent</span></div><div class="line"><span style="color:#A0A1A7CC">	--Any value container instance in this folder will be displayed on the built-in leaderboard UI</span></div><div class="line">
+</div><div class="line"><span style="color:#00E8C6">leaderstats</span><span style="color:#EE5D43"> =</span><span style="color:#00E8C6"> Instance</span><span style="color:#D5CED9">.</span><span style="color:#FFE66D">new</span><span style="color:#D5CED9">(</span><span style="color:#96E072">"Folder"</span><span style="color:#D5CED9">)</span></div><div class="line"><span style="color:#00E8C6">leaderstats</span><span style="color:#D5CED9">.Name </span><span style="color:#EE5D43">=</span><span style="color:#96E072"> "leaderstats"</span></div><div class="line"><span style="color:#00E8C6">leaderstats</span><span style="color:#D5CED9">.Parent </span><span style="color:#EE5D43">=</span><span style="color:#00E8C6"> game</span><span style="color:#D5CED9">.Players.LocalPlayer</span></div><div class="line">
+</div><div class="line"><span style="color:#A0A1A7CC">--Create the Coin IntValue Instance</span></div><div class="line">
+</div><div class="line"><span style="color:#00E8C6">Coins</span><span style="color:#EE5D43"> =</span><span style="color:#00E8C6"> Instance</span><span style="color:#D5CED9">.</span><span style="color:#FFE66D">new</span><span style="color:#D5CED9">(</span><span style="color:#96E072">"IntValue"</span><span style="color:#D5CED9">)</span></div><div class="line"><span style="color:#00E8C6">Coins</span><span style="color:#D5CED9">.Name </span><span style="color:#EE5D43">=</span><span style="color:#96E072"> "Coins"</span></div><div class="line"><span style="color:#00E8C6">Coins</span><span style="color:#D5CED9">.Parent </span><span style="color:#EE5D43">=</span><span style="color:#00E8C6"> game</span><span style="color:#D5CED9">.Players.LocalPlayer.leaderstats</span></div><div class="line"><span style="color:#00E8C6">Coins</span><span style="color:#D5CED9">.Value </span><span style="color:#EE5D43">=</span><span style="color:#F39C12"> 0</span></div><div class="line">
+</div><div class="line"><span style="color:#A0A1A7CC">--Let's add a sound that plays whenever a coin is received</span></div><div class="line"><span style="color:#C74DED">local</span><span style="color:#00E8C6"> collectSound</span><span style="color:#EE5D43"> =</span><span style="color:#00E8C6"> script</span><span style="color:#D5CED9">.collect</span></div><div class="line">
+</div><div class="line">
+</div><div class="line"><span style="color:#A0A1A7CC">--Listen for the CoinEvent being fired from server, and adjust the value of the Coin IntValue by the amount received.</span></div><div class="line"><span style="color:#00E8C6">CoinEvent</span><span style="color:#D5CED9">.OnClientEvent:</span><span style="color:#FFE66D">Connect</span><span style="color:#D5CED9">(</span><span style="color:#C74DED">function</span><span style="color:#D5CED9">(</span><span style="color:#00E8C6">amount</span><span style="color:#D5CED9">)</span></div><div class="line"><span style="color:#00E8C6">	Coins</span><span style="color:#D5CED9">.Value </span><span style="color:#EE5D43">+=</span><span style="color:#00E8C6"> amount</span></div><div class="line"><span style="color:#D5CED9">	collectSound:</span><span style="color:#FFE66D">Play</span><span style="color:#D5CED9">()</span></div><div class="line"><span style="color:#C74DED">end</span><span style="color:#D5CED9">)</span></div></code></pre>
+
+<br>
+
+<p>
+For the final part of this Demo, I've created a UI element that displays the current amount of coins that a Player has. It has a LocalScript that detects when the Coin
+IntValue changes, and it will change a TextLabel to reflect the correct new amount of coins. Roblox Studio has a built-in UI system, though professional developers may
+want to create the graphics for the UI in an external program.
+</p>
+
+<img src="../images/Coin_UI.png">
+
+<div><br></div>
+
+<pre class="andromeeda" style="background-color:#23262E;color:#D5CED9" tabindex="0"><code><div class="line"><span style="color:#A0A1A7CC">--This script handles the UI element of the Coint Counter itself. It detects any changes to the IntValue and adjusts the TextLabel of the Counter</span></div><div class="line">
+</div><div class="line"><span style="color:#C74DED">local</span><span style="color:#00E8C6"> CoinAmount</span><span style="color:#EE5D43"> =</span><span style="color:#00E8C6"> script</span><span style="color:#D5CED9">.Parent.CoinsAmount</span></div><div class="line">
+</div><div class="line"><span style="color:#A0A1A7CC">--Use :WaitForChild() here, because it will throw an error if this script loads before these Instances exist</span></div><div class="line"><span style="color:#C74DED">local</span><span style="color:#00E8C6"> Coins</span><span style="color:#EE5D43"> =</span><span style="color:#00E8C6"> game</span><span style="color:#D5CED9">.Players.LocalPlayer:</span><span style="color:#FFE66D">WaitForChild</span><span style="color:#D5CED9">(</span><span style="color:#96E072">"leaderstats"</span><span style="color:#D5CED9">):</span><span style="color:#FFE66D">WaitForChild</span><span style="color:#D5CED9">(</span><span style="color:#96E072">"Coins"</span><span style="color:#D5CED9">)</span></div><div class="line">
+</div><div class="line"><span style="color:#00E8C6">Coins</span><span style="color:#D5CED9">.Changed:</span><span style="color:#FFE66D">Connect</span><span style="color:#D5CED9">(</span><span style="color:#C74DED">function</span><span style="color:#D5CED9">()</span></div><div class="line"><span style="color:#00E8C6">	CoinAmount</span><span style="color:#D5CED9">.Text </span><span style="color:#EE5D43">=</span><span style="color:#00E8C6"> Coins</span><span style="color:#D5CED9">.Value</span></div><div class="line"><span style="color:#C74DED">end</span><span style="color:#D5CED9">)</span></div><div class="line">
+</div></code></pre>
+
+<br>
+
+<p>With every part of the Coin Collection system complete, below is a video showcasing how it actually works in-game:</p>
+
+<video width = "60%" height = "400" controls>
+    <source src="../videos/coin.mp4">
+</video>
+
+<div><br><br><br></div>
+
+<h3 id="demo2">Demo #2 - Toolbox and Generate Rig:</h3>
+
+<p>While this Demo doesn't include code, it does show off a couple features built into Roblox Studio itself. The first feature we'll look at is the Toolbox</p>
+
+<img src="../images/Toolbox.png" width="50%">
+
+<br>
+
+<p>
+The Toolbox can be a useful feature. It allows you to browse the Developer marketplace within Roblox Studio, where other developers have published assets for other 
+developers to use. The downside to allowing anyone to publish assets is that there will be many models and such that are not very high quality, and it's not recommended
+to use any Scripts people have uploaded for the sake of security, as well as Scripts being broken or poorly written. 
+The exception to this is an actual trusted Studio Plugin or Module Script.</p>
+
+<p>
+For our purposes in this Demo, I've searched for "Sword" in the Models category, and imported the Classic Sword Tool provided by the official Roblox account into
+the "StarterPack" Folder, which inserts Tools inside of the Folder into the Player's inventory when joining the game.
+</p>
+
+<img src="../images/Sword.png">
+
+<br>
+
+<p>
+The next feature is the Generate Rig or Character Importer tool. It allows you to import a Humanoid object into the Workspace based on the option you select in the importer.
+</p>
+
+<img src="../images/Rig_Import.png">
+<img src="../images/Humanoid.png">
+
+<br>
+
+<p>
+These Rigs have a couple purposes. You can use them as a template to create an NPC for your game, or you can use them as a Dummy to create animations using the
+animation editor. Since the Rigs contain a Humanoid object, they can have similar properties to Players themselves, including Health, which allows them to take damage
+from sources like the Sword Tool I imported into the game earlier.
+</p>
+
+<video width = "60%" height = "400" controls>
+    <source src="../videos/sword.mp4">
+</video>
+
+<div><br><br><br></div>
+
+<h3 id="demo3">Demo #3 - Sprinting System:</h3>
+
+<p>This Demo is the most technically complex of the three Demos, though it includes less code than the first Demo. It introduces a few more services that you can utilize.</p>
+<p>
+For this Demo, I've coded a sprinting system that allows the Player to run faster than the base Walk Speed while holding down the respective Input Hotkey.
+The first service it utilizes is the Input Action Service, which allows you to create an Input Action Instance that groups all associated Input Binding Instances
+to a single Action, which is used within code. I've inserted a LocalScript into "StarterPlayerScripts" just like the Coin system, and inserted an Input Action as a child
+of that Script. Finally, I inserted an InputBinding as a child of that InputAction that is mapped to "Left Shift". The main purpose of the InputAction is process if one
+of its child InputBindings has been Pressed, Released, or Changed in general.
+</p>
+
+<pre class="andromeeda" style="background-color:#23262E;color:#D5CED9" tabindex="0"><code><div class="line"><span style="color:#A0A1A7CC">--Declare the InputAction as a variable (Instance used to handle Actions with Input Keybinds as defined by InputBinding Instances)</span></div><div class="line"><span style="color:#00E8C6">sprintInput</span><span style="color:#EE5D43"> =</span><span style="color:#00E8C6"> script</span><span style="color:#D5CED9">.SprintAction</span></div><div class="line">
+</div><div class="line"><span style="color:#A0A1A7CC">--Setup Player/Humanoid variables and desired walkspeed/runspeed</span></div><div class="line"><span style="color:#C74DED">local</span><span style="color:#00E8C6"> Player</span><span style="color:#EE5D43"> =</span><span style="color:#00E8C6"> game</span><span style="color:#D5CED9">.Players.LocalPlayer</span></div><div class="line"><span style="color:#C74DED">local</span><span style="color:#00E8C6"> Character</span><span style="color:#EE5D43"> =</span><span style="color:#00E8C6"> Player</span><span style="color:#D5CED9">.Character </span><span style="color:#EE5D43">or</span><span style="color:#00E8C6"> Player</span><span style="color:#D5CED9">.CharacterAdded:</span><span style="color:#FFE66D">Wait</span><span style="color:#D5CED9">()</span></div><div class="line"><span style="color:#C74DED">local</span><span style="color:#00E8C6"> Humanoid</span><span style="color:#EE5D43"> =</span><span style="color:#00E8C6"> Character</span><span style="color:#D5CED9">.Humanoid</span></div><div class="line"><span style="color:#C74DED">local</span><span style="color:#00E8C6"> WalkSpeed</span><span style="color:#EE5D43"> =</span><span style="color:#F39C12"> 16</span></div><div class="line"><span style="color:#C74DED">local</span><span style="color:#00E8C6"> RunSpeed</span><span style="color:#EE5D43"> =</span><span style="color:#F39C12"> 24</span></div><div class="line"><span style="color:#C74DED">local</span><span style="color:#00E8C6"> isInput</span><span style="color:#EE5D43"> =</span><span style="color:#EE5D43"> false</span></div><div class="line"><span style="color:#C74DED">local</span><span style="color:#00E8C6"> isRun</span><span style="color:#EE5D43"> =</span><span style="color:#EE5D43"> false</span></div><div class="line">
+</div><div class="line"><span style="color:#00E8C6">Humanoid</span><span style="color:#D5CED9">.WalkSpeed </span><span style="color:#EE5D43">=</span><span style="color:#00E8C6"> WalkSpeed</span></div><div class="line">
+</div><div class="line"><span style="color:#A0A1A7CC">--Let's make it a little fancy and add a fun camera effect to really sell the Player that their character is running faster</span></div><div class="line"><span style="color:#A0A1A7CC">	--workspace.CurrentCamera is the Player's camera. We can change the FieldOfView property to add some visual flair to go with the running animation</span></div><div class="line"><span style="color:#C74DED">local</span><span style="color:#00E8C6"> PlayerCamera</span><span style="color:#EE5D43"> =</span><span style="color:#00E8C6"> workspace</span><span style="color:#D5CED9">.CurrentCamera</span></div><div class="line">
+</div><div class="line"><span style="color:#A0A1A7CC">--Listen for the InputAction being Pressed and Released, set isInput variable to true/false</span></div><div class="line"><span style="color:#00E8C6">sprintInput</span><span style="color:#D5CED9">.Pressed:</span><span style="color:#FFE66D">Connect</span><span style="color:#D5CED9">(</span><span style="color:#C74DED">function</span><span style="color:#D5CED9">()</span></div><div class="line"><span style="color:#00E8C6">	isInput</span><span style="color:#EE5D43"> =</span><span style="color:#EE5D43"> true</span></div><div class="line"><span style="color:#C74DED">end</span><span style="color:#D5CED9">)</span></div><div class="line">
+</div><div class="line"><span style="color:#00E8C6">sprintInput</span><span style="color:#D5CED9">.Released:</span><span style="color:#FFE66D">Connect</span><span style="color:#D5CED9">(</span><span style="color:#C74DED">function</span><span style="color:#D5CED9">()</span></div><div class="line"><span style="color:#00E8C6">	isInput</span><span style="color:#EE5D43"> =</span><span style="color:#EE5D43"> false</span></div><div class="line"><span style="color:#C74DED">end</span><span style="color:#D5CED9">)</span></div></code></pre>
+
+<br>
+
+<p>
+The next service we'll look at is RunService. RunService is used when you need to check or update something every frame. 
+In this case, we need to actively check for whether the "isInput" and "isRun" variables are true or false.
+The "isRun" variable exists so that the WalkSpeed and Camera effects within the function are not constantly set if the Player is already running 
+or has stopped running as of a previous frame. 
+</p>
+
+<pre class="andromeeda" style="background-color:#23262E;color:#D5CED9" tabindex="0"><code><div class="line"><span style="color:#A0A1A7CC">--This function will fire every Frame. RunService has several events depending on the order it fires in relation to each frame</span></div><div class="line"><span style="color:#A0A1A7CC">	--It is up to your discretion and research on which event should be used for a given case. PostSimulation happens to be last in the order.</span></div><div class="line"><span style="color:#A0A1A7CC">--Check if the Input is true or false and set walkspeed acoordingly</span></div><div class="line"><span style="color:#D5CED9">game:</span><span style="color:#FFE66D">GetService</span><span style="color:#D5CED9">(</span><span style="color:#96E072">"RunService"</span><span style="color:#D5CED9">).PostSimulation:</span><span style="color:#FFE66D">Connect</span><span style="color:#D5CED9">(</span><span style="color:#C74DED">function</span><span style="color:#D5CED9">()</span></div><div class="line"><span style="color:#C74DED">	if</span><span style="color:#00E8C6"> isInput</span><span style="color:#EE5D43"> and</span><span style="color:#EE5D43"> not</span><span style="color:#00E8C6"> isRun</span><span style="color:#C74DED"> then</span></div><div class="line"><span style="color:#00E8C6">		Humanoid</span><span style="color:#D5CED9">.WalkSpeed </span><span style="color:#EE5D43">=</span><span style="color:#00E8C6"> RunSpeed</span></div><div class="line"><span style="color:#00E8C6">		PlayerCamera</span><span style="color:#D5CED9">.FieldOfView </span><span style="color:#EE5D43">=</span><span style="color:#F39C12"> 80</span></div><div class="line"><span style="color:#00E8C6">		isRun</span><span style="color:#EE5D43"> =</span><span style="color:#EE5D43"> true</span></div><div class="line"><span style="color:#C74DED">	elseif</span><span style="color:#EE5D43"> not</span><span style="color:#00E8C6"> isInput</span><span style="color:#EE5D43"> and</span><span style="color:#00E8C6"> isRun</span><span style="color:#C74DED"> then</span></div><div class="line"><span style="color:#00E8C6">		Humanoid</span><span style="color:#D5CED9">.WalkSpeed </span><span style="color:#EE5D43">=</span><span style="color:#00E8C6"> WalkSpeed</span></div><div class="line"><span style="color:#00E8C6">		PlayerCamera</span><span style="color:#D5CED9">.FieldOfView </span><span style="color:#EE5D43">=</span><span style="color:#F39C12"> 70</span></div><div class="line"><span style="color:#00E8C6">		isRun</span><span style="color:#EE5D43"> =</span><span style="color:#EE5D43"> false</span></div><div class="line"><span style="color:#C74DED">	end</span></div><div class="line"><span style="color:#C74DED">end</span><span style="color:#D5CED9">)</span></div></code></pre>
+
+<br>
+
+<p>
+Changing the FieldOfView statically doesn't feel very natural. It hurts the effect more than it helps. Let's introduce TweenService.
+A Tween is an instance that lets you change a property of an object from its current value to the target value in smooth increments.
+The length of a Tween is dependent on the parameter you pass in a TweenInfo object, which dictates properties of the Tween
+</p>
+
+<pre class="andromeeda" style="background-color:#23262E;color:#D5CED9" tabindex="0"><code><div class="line"><span style="color:#C74DED">local</span><span style="color:#00E8C6"> TweenService</span><span style="color:#EE5D43"> =</span><span style="color:#D5CED9"> game:</span><span style="color:#FFE66D">GetService</span><span style="color:#D5CED9">(</span><span style="color:#96E072">"TweenService"</span><span style="color:#D5CED9">)</span></div><div class="line"><span style="color:#A0A1A7CC">--A TweenInfo with one parameter is duration</span></div><div class="line"><span style="color:#C74DED">local</span><span style="color:#00E8C6"> TweenInfo</span><span style="color:#EE5D43"> =</span><span style="color:#00E8C6"> TweenInfo</span><span style="color:#D5CED9">.</span><span style="color:#FFE66D">new</span><span style="color:#D5CED9">(</span><span style="color:#F39C12">0.25</span><span style="color:#D5CED9">)</span></div><div class="line">
+</div><div class="line"><span style="color:#A0A1A7CC">--TweenService:Create(TargetInstance,TweenInfo,{Property = Value})</span></div><div class="line"><span style="color:#A0A1A7CC">	--TweenName:Play() to run the Tween. You can also use other methods like :Pause(), :Cancel() to control the Tween</span></div><div class="line"><span style="color:#A0A1A7CC">	--You can use the event TweenName.Completed:Wait() to force the script to wait for the Tween's completion.</span></div><div class="line">
+</div><div class="line"><span style="color:#C74DED">local</span><span style="color:#00E8C6"> RunFOV</span><span style="color:#EE5D43"> =</span><span style="color:#D5CED9"> TweenService:</span><span style="color:#FFE66D">Create</span><span style="color:#D5CED9">(</span><span style="color:#00E8C6">PlayerCamera</span><span style="color:#D5CED9">, </span><span style="color:#00E8C6">TweenInfo</span><span style="color:#D5CED9">, {</span><span style="color:#00E8C6">FieldOfView</span><span style="color:#EE5D43"> =</span><span style="color:#F39C12"> 80</span><span style="color:#D5CED9">})</span></div><div class="line"><span style="color:#C74DED">local</span><span style="color:#00E8C6"> DefaultFOV</span><span style="color:#EE5D43"> =</span><span style="color:#D5CED9"> TweenService:</span><span style="color:#FFE66D">Create</span><span style="color:#D5CED9">(</span><span style="color:#00E8C6">PlayerCamera</span><span style="color:#D5CED9">, </span><span style="color:#00E8C6">TweenInfo</span><span style="color:#D5CED9">, {</span><span style="color:#00E8C6">FieldOfView</span><span style="color:#EE5D43"> =</span><span style="color:#F39C12"> 70</span><span style="color:#D5CED9">})</span></div></code></pre>
+
+<br>
+
+<p>Now for the full Script with Tweening implemented:</p>
+
+<pre class="andromeeda" style="background-color:#23262E;color:#D5CED9" tabindex="0"><code><div class="line"><span style="color:#A0A1A7CC">--Sprinting system. Let's assume the Player has access to a keyboard (so the input for sprinting is Left Shift)</span></div><div class="line"><span style="color:#A0A1A7CC">	--and they can sprint forever with no stamina drain</span></div><div class="line">
+</div><div class="line"><span style="color:#A0A1A7CC">--Declare the InputAction as a variable (Instance used to handle Actions with Input Keybinds as defined by InputBinding Instances)</span></div><div class="line"><span style="color:#00E8C6">sprintInput</span><span style="color:#EE5D43"> =</span><span style="color:#00E8C6"> script</span><span style="color:#D5CED9">.SprintAction</span></div><div class="line">
+</div><div class="line"><span style="color:#A0A1A7CC">--Setup Player/Humanoid variables and desired walkspeed/runspeed</span></div><div class="line"><span style="color:#C74DED">local</span><span style="color:#00E8C6"> Player</span><span style="color:#EE5D43"> =</span><span style="color:#00E8C6"> game</span><span style="color:#D5CED9">.Players.LocalPlayer</span></div><div class="line"><span style="color:#C74DED">local</span><span style="color:#00E8C6"> Character</span><span style="color:#EE5D43"> =</span><span style="color:#00E8C6"> Player</span><span style="color:#D5CED9">.Character </span><span style="color:#EE5D43">or</span><span style="color:#00E8C6"> Player</span><span style="color:#D5CED9">.CharacterAdded:</span><span style="color:#FFE66D">Wait</span><span style="color:#D5CED9">()</span></div><div class="line"><span style="color:#C74DED">local</span><span style="color:#00E8C6"> Humanoid</span><span style="color:#EE5D43"> =</span><span style="color:#00E8C6"> Character</span><span style="color:#D5CED9">.Humanoid</span></div><div class="line"><span style="color:#C74DED">local</span><span style="color:#00E8C6"> WalkSpeed</span><span style="color:#EE5D43"> =</span><span style="color:#F39C12"> 16</span></div><div class="line"><span style="color:#C74DED">local</span><span style="color:#00E8C6"> RunSpeed</span><span style="color:#EE5D43"> =</span><span style="color:#F39C12"> 24</span></div><div class="line"><span style="color:#C74DED">local</span><span style="color:#00E8C6"> isInput</span><span style="color:#EE5D43"> =</span><span style="color:#EE5D43"> false</span></div><div class="line"><span style="color:#C74DED">local</span><span style="color:#00E8C6"> isRun</span><span style="color:#EE5D43"> =</span><span style="color:#EE5D43"> false</span></div><div class="line">
+</div><div class="line"><span style="color:#00E8C6">Humanoid</span><span style="color:#D5CED9">.WalkSpeed </span><span style="color:#EE5D43">=</span><span style="color:#00E8C6"> WalkSpeed</span></div><div class="line">
+</div><div class="line"><span style="color:#A0A1A7CC">--Let's make it a little fancy and add a fun camera effect to really sell the Player that their character is running faster</span></div><div class="line"><span style="color:#A0A1A7CC">	--workspace.CurrentCamera is the Player's camera. We can change the FieldOfView property to add some visual flair to go with the running animation</span></div><div class="line"><span style="color:#C74DED">local</span><span style="color:#00E8C6"> PlayerCamera</span><span style="color:#EE5D43"> =</span><span style="color:#00E8C6"> workspace</span><span style="color:#D5CED9">.CurrentCamera</span></div><div class="line">
+</div><div class="line"><span style="color:#C74DED">local</span><span style="color:#00E8C6"> TweenService</span><span style="color:#EE5D43"> =</span><span style="color:#D5CED9"> game:</span><span style="color:#FFE66D">GetService</span><span style="color:#D5CED9">(</span><span style="color:#96E072">"TweenService"</span><span style="color:#D5CED9">)</span></div><div class="line"><span style="color:#A0A1A7CC">--A TweenInfo with one parameter is duration</span></div><div class="line"><span style="color:#C74DED">local</span><span style="color:#00E8C6"> TweenInfo</span><span style="color:#EE5D43"> =</span><span style="color:#00E8C6"> TweenInfo</span><span style="color:#D5CED9">.</span><span style="color:#FFE66D">new</span><span style="color:#D5CED9">(</span><span style="color:#F39C12">0.25</span><span style="color:#D5CED9">)</span></div><div class="line">
+</div><div class="line"><span style="color:#A0A1A7CC">--TweenService:Create(TargetInstance,TweenInfo,{Property = Value})</span></div><div class="line"><span style="color:#A0A1A7CC">	--TweenName:Play() to run the Tween. You can also use other methods like :Pause(), :Cancel() to control the Tween</span></div><div class="line"><span style="color:#A0A1A7CC">	--You can use the event TweenName.Completed:Wait() to force the script to wait for the Tween's completion.</span></div><div class="line">
+</div><div class="line"><span style="color:#C74DED">local</span><span style="color:#00E8C6"> RunFOV</span><span style="color:#EE5D43"> =</span><span style="color:#D5CED9"> TweenService:</span><span style="color:#FFE66D">Create</span><span style="color:#D5CED9">(</span><span style="color:#00E8C6">PlayerCamera</span><span style="color:#D5CED9">, </span><span style="color:#00E8C6">TweenInfo</span><span style="color:#D5CED9">, {</span><span style="color:#00E8C6">FieldOfView</span><span style="color:#EE5D43"> =</span><span style="color:#F39C12"> 80</span><span style="color:#D5CED9">})</span></div><div class="line"><span style="color:#C74DED">local</span><span style="color:#00E8C6"> DefaultFOV</span><span style="color:#EE5D43"> =</span><span style="color:#D5CED9"> TweenService:</span><span style="color:#FFE66D">Create</span><span style="color:#D5CED9">(</span><span style="color:#00E8C6">PlayerCamera</span><span style="color:#D5CED9">, </span><span style="color:#00E8C6">TweenInfo</span><span style="color:#D5CED9">, {</span><span style="color:#00E8C6">FieldOfView</span><span style="color:#EE5D43"> =</span><span style="color:#F39C12"> 70</span><span style="color:#D5CED9">})</span></div><div class="line">
+</div><div class="line"><span style="color:#A0A1A7CC">--Listen for the InputAction being Pressed and Released, set isInput variable to true/false</span></div><div class="line"><span style="color:#00E8C6">sprintInput</span><span style="color:#D5CED9">.Pressed:</span><span style="color:#FFE66D">Connect</span><span style="color:#D5CED9">(</span><span style="color:#C74DED">function</span><span style="color:#D5CED9">()</span></div><div class="line"><span style="color:#00E8C6">	isInput</span><span style="color:#EE5D43"> =</span><span style="color:#EE5D43"> true</span></div><div class="line"><span style="color:#C74DED">end</span><span style="color:#D5CED9">)</span></div><div class="line">
+</div><div class="line"><span style="color:#00E8C6">sprintInput</span><span style="color:#D5CED9">.Released:</span><span style="color:#FFE66D">Connect</span><span style="color:#D5CED9">(</span><span style="color:#C74DED">function</span><span style="color:#D5CED9">()</span></div><div class="line"><span style="color:#00E8C6">	isInput</span><span style="color:#EE5D43"> =</span><span style="color:#EE5D43"> false</span></div><div class="line"><span style="color:#C74DED">end</span><span style="color:#D5CED9">)</span></div><div class="line">
+</div><div class="line">
+</div><div class="line"><span style="color:#A0A1A7CC">--This function will fire every Frame. RunService has several events depending on the order it fires in relation to each frame</span></div><div class="line"><span style="color:#A0A1A7CC">	--It is up to your discretion and research on which event should be used for a given case. PostSimulation happens to be last in the order.</span></div><div class="line"><span style="color:#A0A1A7CC">--Check if the Input is true or false and set walkspeed acoordingly</span></div><div class="line"><span style="color:#D5CED9">game:</span><span style="color:#FFE66D">GetService</span><span style="color:#D5CED9">(</span><span style="color:#96E072">"RunService"</span><span style="color:#D5CED9">).PostSimulation:</span><span style="color:#FFE66D">Connect</span><span style="color:#D5CED9">(</span><span style="color:#C74DED">function</span><span style="color:#D5CED9">()</span></div><div class="line"><span style="color:#C74DED">	if</span><span style="color:#00E8C6"> isInput</span><span style="color:#EE5D43"> and</span><span style="color:#EE5D43"> not</span><span style="color:#00E8C6"> isRun</span><span style="color:#C74DED"> then</span></div><div class="line"><span style="color:#00E8C6">		Humanoid</span><span style="color:#D5CED9">.WalkSpeed </span><span style="color:#EE5D43">=</span><span style="color:#00E8C6"> RunSpeed</span></div><div class="line"><span style="color:#D5CED9">		RunFOV:</span><span style="color:#FFE66D">Play</span><span style="color:#D5CED9">()</span></div><div class="line"><span style="color:#00E8C6">		isRun</span><span style="color:#EE5D43"> =</span><span style="color:#EE5D43"> true</span></div><div class="line"><span style="color:#C74DED">	elseif</span><span style="color:#EE5D43"> not</span><span style="color:#00E8C6"> isInput</span><span style="color:#EE5D43"> and</span><span style="color:#00E8C6"> isRun</span><span style="color:#C74DED"> then</span></div><div class="line"><span style="color:#00E8C6">		Humanoid</span><span style="color:#D5CED9">.WalkSpeed </span><span style="color:#EE5D43">=</span><span style="color:#00E8C6"> WalkSpeed</span></div><div class="line"><span style="color:#D5CED9">		DefaultFOV:</span><span style="color:#FFE66D">Play</span><span style="color:#D5CED9">()</span></div><div class="line"><span style="color:#00E8C6">		isRun</span><span style="color:#EE5D43"> =</span><span style="color:#EE5D43"> false</span></div><div class="line"><span style="color:#C74DED">	end</span></div><div class="line"><span style="color:#C74DED">end</span><span style="color:#D5CED9">)</span></div></code></pre>
+
+<br>
+
+<p>With everything put together:</p>
+
+<video width = "60%" height = "400" controls>
+    <source src="../videos/sprint.mp4">
+</video>
+
+<div><br><br></div>
+
+<p>
+You can choose to add other inputs if you plan for your game to be playable on other platforms like Mobile and compatible with Controllers.
+</p>
+<p>
+Additionally, you can implement a stamina system, but this gets more complicated since you should also pair it with a UI element.
+Another complication of including stamina, is that you will need to adjust an integer variable dynamically as the Player sprints and stops.
+You will need to decide how you want things to work, like if there should be a minimum amount of stamina to sprint, if you want the Player to
+automatically begin sprinting again if the input is still being held after running out of stamina, and those sorts of specifics.
+You will want the UI element to accurately reflect the stamina at a given moment.
+</p>
+<p>
+Since Roblox has variable framerates, meaning different Players are going to be running the game at different framerates, you will want to
+incorporate "Delta Time" into your calculation for stamina drain/gain so that it drains/restores at the proper rate regardless of framerate.
+Delta Time is the duration between frames, and is provided by RenderStepped. you will need to provide a parameter for it to populate.
+Just for example: 
+</p>
+<pre class="andromeeda" style="background-color:#23262E;color:#D5CED9" tabindex="0"><code><div class="line"><span style="color:#00E8C6">PlayerStamina</span><span style="color:#EE5D43"> =</span><span style="color:#FFE66D"> math.max</span><span style="color:#D5CED9">(</span><span style="color:#00E8C6">PlayerStamina</span><span style="color:#EE5D43"> -</span><span style="color:#00E8C6"> StaminaLoss</span><span style="color:#EE5D43"> *</span><span style="color:#00E8C6"> DeltaTime</span><span style="color:#D5CED9">, </span><span style="color:#F39C12">0</span><span style="color:#D5CED9"> )</span></div></code></pre>
+<p>
+You will have to decide for your game the best balanced values for maximum stamina, stamina loss (drain speed), and stamina gain (recovery speed).
+You may want to implement a check for if the Player is moving, so that stamina doesn't drain while holding the input but not moving.
+You'd also use this check to prevent the Camera FieldOfView from changing unless the Player is actually moving.
+</p>
+
+<div><br><br></div>
+
+</div>
+
+<button type="button" class="top" onclick="window.location.href='#'">Back to Top</button>

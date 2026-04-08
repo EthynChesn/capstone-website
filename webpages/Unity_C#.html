@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<head>
+<link rel="stylesheet" href = "../css-js/styles.css">
+<script src="../css-js/webscripts.js" defer></script>
+</head>
+
+
+<!--Body-->
+<title>C# & Unity - Video Game Development</title>
+
+<div class = "NavOpen"><img src = "../images/bars-solid-full.svg" onclick = openNav()></div>
+<div class = "homebtn"><img src = "../images/house-solid-full.svg" onclick = 'window.location.href = "../index.html"'></div>
+
+<h1>
+<a href="https://learn.microsoft.com/en-us/dotnet/csharp/" target = "_blank" rel="noopener noreferrer"><img src="../images/c%23-logo.png" align = "center" style="width: 5%;"></a>
+C# Language and Unity Engine
+<a href="https://unity.com/" target = "_blank" rel="noopener noreferrer"><img src="../images/unity-logo.png" align = "center" style="width: 8%;"></a>
+</h1>
+
+<br>
+
+<div style="margin-left:32.5%;">
+<button class="tablink" onclick="openPage('About',this)" id="defaultOpen">About</button>
+<button class="tablink" onclick="openPage('Demos',this)">Demos</button>
+</div>
+
+<br><br>
+
+<div id = "About" class = "tabcontent">
+
+<div id="AboutSideNav" class="sidenav">
+  <div class = "navbox">
+  <a class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#introduction">Introduction</a>
+  <a href="#prosandcons">Pros and Cons</a>
+  <a href="#conclusion">Conclusion</a>
+  <a href="../index.html"><img src="../images/house-solid-full.svg" style="width: 20%;"></a>
+  </div>
+</div>
+
+
+<br>
+<h2 id = "introduction">Introduction:</h2>
+
+<p>
+C# is a language developed by Microsoft, and is an objected-oriented language meaning it uses classes and objects for code structure. 
+It’s strongly typed, so types for variables and functions are enforced at runtime. It has cross-platform support via Microsoft’s .NET framework. 
+Unity is one of many applications of C# usage. C# is the main supported programming language for developing games on Unity. 
+Unity also has a feature called Visual Scripting which allows for programming games using nodes rather than code. 
+Unity is a well known engine used throughout the industry, and has powerful support for both 2D and 3D games.
+</p>
+
+<div><br><hr class="divider"><br></div>
+
+<h2 id = "prosandcons">Pros and Cons:</h2>
+
+<h3>Pros:</h3>
+
+<ul>
+<li>Unity has a large asset store:<ul><li>It includes tools, plugins, and game assets maintained by an active and growing community of developers.</li></ul></li>
+<li>Unity is relatively lightweight:<ul><li>While other engines are less hardware intensive than Unity, it is still lightweight compared to some other engines that are available.</li></ul></li>
+<li>Powerful 2D and 3D support:<ul><li>Unity supports games made in both 2D and 3D and has technologies and features that allow for creating high quality, professional games in both categories. Some engines specialize in one or the other, or don’t have support for one entirely.</li></ul></li>
+<li>Cross-Platform Deployment:<ul><li>Unity can be used to create games and release them on a multitude of platforms with ease.</li></ul></li>
+<li>C# is versatile and universal:<ul><li>C# is not only suitable for any game development needs on Unity, it’s also a language that has been widely adopted across the game development industry across most platforms, and having knowledge and experience with C# allows for high flexibility.</li></ul></li>
+</ul>
+
+<br>
+
+<h3>Cons:</h3>
+
+<ul>
+<li>Unity has licensing:<ul><li>While a free version of Unity is provided, a paid plan is required to get rid of the Unity splash screen from your finished products. Larger companies with higher earnings through Unity must purchase higher cost subscriptions.</li></ul></li>
+<li>Large-scale Shortcomings:<ul><li>Unity’s technologies start to become inefficient for projects that are large in size and particularly complex. Optimizing the games for performance of higher quality games is more difficult.</li></ul></li>
+<li>Learning Curve:<ul><li>While Unity is easier to learn than some engines, it is more difficult to learn than others. The layout is less intuitive and the features ans technologies are more advanced.</li></ul></li>
+<li>C# Issues:<ul><li>C# is considered a high-level language which means it has limited hardware access. It’s dependent on the .NET framework which means using other runtimes comes with obstacles. It’s a more difficult language to learn than some others like Python or Lua due to its strict type enforcement, syntax, and being object oriented. Code requires recompilation before runtime so development on Unity can feel slow if there is a lot of playtesting and needs adjustments of the code in between tests.</li></ul></li>
+</ul>
+
+<div><br><hr class="divider"><br></div>
+
+<h2 id = "conclusion">Conclusion:</h2>
+
+<p>
+Unity is a powerful game engine for small and medium sized projects with stylistic graphical quality. 
+That goes for both 2D and 3D games. It can be used for a wide range of games within that range of scale and qualities. 
+It begins to fall short with large, complex projects and games that have higher quality, realistic graphics that still expect good performance on the Player’s end. 
+C# is a suitable language for developing games on Unity and otherwise, while it has its complications, it doesn’t fall short in its usage to a significant degree.
+</p>
+
+<div><br><br></div>
+
+</div>
+
+<div id="Demos" class="tabcontent">
+
+<div id="DemosSideNav" class="sidenav">
+  <div class = "navbox">
+  <a class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#demo1">Demo #1 - 2D Platformer Movement</a>
+  <a href="#demo2">Demo #2 - Coin Collection</a>
+  <a href="#demo3">Demo #3 - Spike Obstacle</a>
+  <a href="../index.html"><img src="../images/house-solid-full.svg" style="width: 20%;"></a>
+  </div>
+</div>
+
+<br>
+<h2>Demos:</h2>
+
+<br>
+
+<h3 id = "demo1">Demo #1 - 2D Platformer Movement:</h3>
+
+<p>This demo showcases a basic Player movement system in Unity's 2D engine. Starting with an empty project, I've created a new 2D Sprite object and called it Player.
+I also added some sprites and gave them the tag "Ground" so that the Player has some solid objects to move on which will be handled in the code as collisions.
+</p>
+
+<img src="../images/unity_player.png" style="width:50%;">
+
+<p>In order for the Player object to work how I want, I had to add a 2D Box collision component to it. I also set the color of the square shaped Player sprite.
+The last change I made was freezing the Z rotation of the Sprite so that the Player remains upright while moving and jumping around.
+</p>
+
+<img src="../images/unity_player-inspector.png" style="width: 20%;">
+
+<p>This is everything needed to begin coding the Player's movement. I created and attached a script called PlayerController to the Player as a component.
+First, I set up the outline of the script including the class, the libraries being used, and some helpful variables.
+</p>
+
+<pre class="andromeeda" style="background-color:#23262E;color:#D5CED9" tabindex="0"><code><div class="line"><span style="color:#C74DED">using</span><span style="color:#FFE66D"> UnityEngine</span></div><div class="line"><span style="color:#FFE66D">using</span><span style="color:#FFE66D"> System</span><span style="color:#D5CED9">.</span><span style="color:#FFE66D">Collections</span><span style="color:#D5CED9">;</span></div><div class="line"><span style="color:#C74DED">using</span><span style="color:#FFE66D"> UnityEngine</span><span style="color:#D5CED9">.</span><span style="color:#FFE66D">InputSystem</span><span style="color:#D5CED9">;</span></div><div class="line">
+</div><div class="line"><span style="color:#C74DED">public</span><span style="color:#C74DED"> class</span><span style="color:#FFE66D"> PlayerController</span><span style="color:#D5CED9"> : </span><span style="color:#FFE66D">MonoBehaviour</span></div><div class="line"><span style="color:#D5CED9">{</span></div><div class="line"><span style="color:#C74DED">    public</span><span style="color:#FFE66D"> InputAction</span><span style="color:#D5CED9"> MoveAction;</span></div><div class="line"><span style="color:#C74DED">    private</span><span style="color:#FFE66D"> Rigidbody2D</span><span style="color:#D5CED9"> rb;</span></div><div class="line"><span style="color:#C74DED">    private</span><span style="color:#FFE66D"> SpriteRenderer</span><span style="color:#D5CED9"> spr;</span></div><div class="line">
+</div><div class="line"><span style="color:#C74DED">   	void</span><span style="color:#FFE66D"> Start</span><span style="color:#D5CED9">()</span></div><div class="line"><span style="color:#D5CED9">   	{</span></div><div class="line"><span style="color:#00E8C6">            MoveAction</span><span style="color:#D5CED9">.</span><span style="color:#FFE66D">Enable</span><span style="color:#D5CED9">();</span></div><div class="line"><span style="color:#00E8C6">            rb</span><span style="color:#EE5D43"> =</span><span style="color:#00E8C6"> gameObject</span><span style="color:#D5CED9">.</span><span style="color:#FFE66D">GetComponent</span><span style="color:#D5CED9">&#x3C;</span><span style="color:#FFE66D">Rigidbody2D</span><span style="color:#D5CED9">>();</span></div><div class="line"><span style="color:#00E8C6">            spr</span><span style="color:#EE5D43"> =</span><span style="color:#00E8C6"> gameObject</span><span style="color:#D5CED9">.</span><span style="color:#FFE66D">GetComponent</span><span style="color:#D5CED9">&#x3C;</span><span style="color:#FFE66D">SpriteRenderer</span><span style="color:#D5CED9">>();</span></div><div class="line"><span style="color:#D5CED9">   	}</span></div><div class="line">
+</div><div class="line"><span style="color:#C74DED">    public</span><span style="color:#C74DED"> float</span><span style="color:#D5CED9"> moveSpeed </span><span style="color:#EE5D43">=</span><span style="color:#F39C12"> 5f</span><span style="color:#D5CED9">;</span></div><div class="line"><span style="color:#C74DED">    public</span><span style="color:#C74DED"> float</span><span style="color:#D5CED9"> jumpForce </span><span style="color:#EE5D43">=</span><span style="color:#F39C12"> 8f</span><span style="color:#D5CED9">;</span></div><div class="line"><span style="color:#C74DED">    bool</span><span style="color:#D5CED9"> isGrounded;</span></div><div class="line"><span style="color:#C74DED">    bool</span><span style="color:#D5CED9"> isJumped </span><span style="color:#EE5D43">=</span><span style="color:#EE5D43"> false</span><span style="color:#D5CED9">;</span></div><div class="line">
+</div><div class="line"><span style="color:#C74DED">   	void</span><span style="color:#FFE66D"> Update</span><span style="color:#D5CED9">()</span></div><div class="line"><span style="color:#D5CED9">   	{      </span></div><div class="line"><span style="color:#D5CED9">  </span></div><div class="line"><span style="color:#D5CED9">   	}</span></div><div class="line"><span style="color:#D5CED9">}</span></div></code></pre>
+
+<p>Next, the Update() function which runs once every frame.</p>
+
+<pre class="andromeeda" style="background-color:#23262E;color:#D5CED9" tabindex="0"><code><div class="line"><span style="color:#C74DED">void</span><span style="color:#FFE66D"> Update</span><span style="color:#D5CED9">()</span></div><div class="line"><span style="color:#D5CED9">   	{</span></div><div class="line"><span style="color:#A0A1A7CC">            //Get the Vector2 value of the Player's MoveAction                          </span></div><div class="line"><span style="color:#C74DED">            float</span><span style="color:#D5CED9"> Velocity </span><span style="color:#EE5D43">=</span><span style="color:#F39C12"> 0f</span><span style="color:#D5CED9">;</span></div><div class="line"><span style="color:#FFE66D">     		Vector2</span><span style="color:#D5CED9"> move </span><span style="color:#EE5D43">=</span><span style="color:#00E8C6"> MoveAction</span><span style="color:#D5CED9">.</span><span style="color:#FFE66D">ReadValue</span><span style="color:#D5CED9">&#x3C;</span><span style="color:#FFE66D">Vector2</span><span style="color:#D5CED9">>();</span></div><div class="line"><span style="color:#A0A1A7CC">            //If the movement is horizontal, Velocity is in the x axis at the Movement speed</span></div><div class="line"><span style="color:#C74DED">            if</span><span style="color:#D5CED9">(</span><span style="color:#00E8C6">move</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">x</span><span style="color:#EE5D43"> !=</span><span style="color:#F39C12"> 0f</span><span style="color:#D5CED9">)</span></div><div class="line"><span style="color:#D5CED9">            {</span></div><div class="line"><span style="color:#00E8C6">     		    Velocity</span><span style="color:#EE5D43"> =</span><span style="color:#00E8C6"> move</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">x</span><span style="color:#EE5D43"> *</span><span style="color:#00E8C6"> Time</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">deltaTime</span><span style="color:#EE5D43"> *</span><span style="color:#00E8C6"> moveSpeed</span><span style="color:#D5CED9">;</span></div><div class="line"><span style="color:#D5CED9">            }</span></div><div class="line">
+</div><div class="line"><span style="color:#A0A1A7CC">            //If the movement is positive Y, the player is jumping</span></div><div class="line"><span style="color:#C74DED">            if</span><span style="color:#D5CED9">(</span><span style="color:#00E8C6">move</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">y</span><span style="color:#EE5D43"> ></span><span style="color:#F39C12"> 0f</span><span style="color:#EE5D43"> &#x26;&#x26;</span><span style="color:#00E8C6"> isGrounded</span><span style="color:#D5CED9">)</span></div><div class="line"><span style="color:#D5CED9">            {</span></div><div class="line"><span style="color:#00E8C6">                isJumped</span><span style="color:#EE5D43"> =</span><span style="color:#EE5D43"> true</span><span style="color:#D5CED9">;</span></div><div class="line"><span style="color:#00E8C6">                gameObject</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">transform</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">localScale</span><span style="color:#EE5D43"> =</span><span style="color:#EE5D43"> new</span><span style="color:#FFE66D"> Vector3</span><span style="color:#D5CED9">(</span><span style="color:#F39C12">0.9f</span><span style="color:#D5CED9">,</span><span style="color:#F39C12">1.1f</span><span style="color:#D5CED9">,</span><span style="color:#F39C12">1f</span><span style="color:#D5CED9">);</span></div><div class="line"><span style="color:#FFE66D">                StartCoroutine</span><span style="color:#D5CED9">(</span><span style="color:#FFE66D">PauseGravity</span><span style="color:#D5CED9">());</span></div><div class="line"><span style="color:#D5CED9">            }</span></div><div class="line">
+</div><div class="line"><span style="color:#C74DED">            else</span><span style="color:#C74DED"> if</span><span style="color:#D5CED9">(</span><span style="color:#00E8C6">move</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">y</span><span style="color:#EE5D43"> &#x3C;</span><span style="color:#F39C12"> 0f</span><span style="color:#EE5D43"> &#x26;&#x26;</span><span style="color:#00E8C6"> isGrounded</span><span style="color:#D5CED9">)</span></div><div class="line"><span style="color:#D5CED9">        {</span></div><div class="line"><span style="color:#00E8C6">            gameObject</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">transform</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">localScale</span><span style="color:#EE5D43"> =</span><span style="color:#EE5D43"> new</span><span style="color:#FFE66D"> Vector3</span><span style="color:#D5CED9">(</span><span style="color:#F39C12">1.2f</span><span style="color:#D5CED9">,</span><span style="color:#F39C12">0.8f</span><span style="color:#D5CED9">,</span><span style="color:#F39C12">1f</span><span style="color:#D5CED9">);</span></div><div class="line"><span style="color:#D5CED9">        }</span></div><div class="line"><span style="color:#D5CED9">        </span></div><div class="line"><span style="color:#C74DED">            else</span><span style="color:#C74DED"> if</span><span style="color:#D5CED9">(</span><span style="color:#00E8C6">move</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">y</span><span style="color:#EE5D43"> ==</span><span style="color:#F39C12"> 0f</span><span style="color:#EE5D43"> &#x26;&#x26;</span><span style="color:#00E8C6"> isGrounded</span><span style="color:#D5CED9">)</span></div><div class="line"><span style="color:#D5CED9">        {</span></div><div class="line"><span style="color:#00E8C6">            gameObject</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">transform</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">localScale</span><span style="color:#EE5D43"> =</span><span style="color:#EE5D43"> new</span><span style="color:#FFE66D"> Vector3</span><span style="color:#D5CED9">(</span><span style="color:#F39C12">1f</span><span style="color:#D5CED9">,</span><span style="color:#F39C12">1f</span><span style="color:#D5CED9">,</span><span style="color:#F39C12">1f</span><span style="color:#D5CED9">);</span></div><div class="line"><span style="color:#D5CED9">        }</span></div><div class="line">
+</div><div class="line"><span style="color:#A0A1A7CC">     		//Apply the Player movement and update position</span></div><div class="line"><span style="color:#FFE66D">            Vector2</span><span style="color:#D5CED9"> position </span><span style="color:#EE5D43">=</span><span style="color:#D5CED9"> (</span><span style="color:#FFE66D">Vector2</span><span style="color:#D5CED9">)</span><span style="color:#00E8C6">transform</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">position</span><span style="color:#EE5D43"> +</span><span style="color:#EE5D43"> new</span><span style="color:#FFE66D"> Vector2</span><span style="color:#D5CED9">(</span><span style="color:#00E8C6">Velocity</span><span style="color:#D5CED9">,</span><span style="color:#F39C12">0f</span><span style="color:#D5CED9">);</span></div><div class="line"><span style="color:#00E8C6">            transform</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">position</span><span style="color:#EE5D43"> =</span><span style="color:#00E8C6"> position</span><span style="color:#D5CED9">;</span></div><div class="line"><span style="color:#D5CED9">    }</span></div></code></pre>
+
+<p>We need functions to handle to entering and exiting of collision with objects that have the "Ground" tag.</p>
+
+<pre class="andromeeda" style="background-color:#23262E;color:#D5CED9" tabindex="0"><code><div class="line"><span style="color:#C74DED">void</span><span style="color:#FFE66D"> OnCollisionEnter2D</span><span style="color:#D5CED9">(</span><span style="color:#FFE66D">Collision2D</span><span style="color:#D5CED9"> collision)</span></div><div class="line"><span style="color:#D5CED9">    {</span></div><div class="line"><span style="color:#C74DED">        if</span><span style="color:#D5CED9">(</span><span style="color:#00E8C6">collision</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">gameObject</span><span style="color:#D5CED9">.</span><span style="color:#FFE66D">CompareTag</span><span style="color:#D5CED9">(</span><span style="color:#96E072">"Ground"</span><span style="color:#D5CED9">))</span></div><div class="line"><span style="color:#D5CED9">        {</span></div><div class="line"><span style="color:#C74DED">            if</span><span style="color:#D5CED9"> (</span><span style="color:#00E8C6">isJumped</span><span style="color:#D5CED9">)</span></div><div class="line"><span style="color:#D5CED9">            {</span></div><div class="line"><span style="color:#FFE66D">                StartCoroutine</span><span style="color:#D5CED9">(</span><span style="color:#FFE66D">WaitforGround</span><span style="color:#D5CED9">());</span></div><div class="line"><span style="color:#D5CED9">            }</span></div><div class="line"><span style="color:#C74DED">            else</span></div><div class="line"><span style="color:#D5CED9">            {</span></div><div class="line"><span style="color:#00E8C6">                isGrounded</span><span style="color:#EE5D43"> =</span><span style="color:#EE5D43"> true</span><span style="color:#D5CED9">; </span></div><div class="line"><span style="color:#D5CED9">            }  </span></div><div class="line"><span style="color:#D5CED9">        }</span></div><div class="line">
+</div><div class="line"><span style="color:#C74DED">void</span><span style="color:#FFE66D"> OnCollisionExit2D</span><span style="color:#D5CED9">(</span><span style="color:#FFE66D">Collision2D</span><span style="color:#D5CED9"> collision)</span></div><div class="line"><span style="color:#D5CED9">    {</span></div><div class="line"><span style="color:#C74DED">        if</span><span style="color:#D5CED9">(</span><span style="color:#00E8C6">collision</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">gameObject</span><span style="color:#D5CED9">.</span><span style="color:#FFE66D">CompareTag</span><span style="color:#D5CED9">(</span><span style="color:#96E072">"Ground"</span><span style="color:#D5CED9">))</span></div><div class="line"><span style="color:#D5CED9">        {</span></div><div class="line"><span style="color:#00E8C6">            isGrounded</span><span style="color:#EE5D43"> =</span><span style="color:#EE5D43"> false</span><span style="color:#D5CED9">;</span></div><div class="line"><span style="color:#D5CED9">        }</span></div><div class="line"><span style="color:#D5CED9">    }</span></div></code></pre>
+
+<p>Note the lines that say "StartCoroutine(some name)". Coroutine's are essentially threads that run alongside the functions they are started from.
+I've used two different coroutine's in this movement system.
+</p>
+
+<pre class="andromeeda" style="background-color:#23262E;color:#D5CED9" tabindex="0"><code><div class="line"><span style="color:#FFE66D">IEnumerator</span><span style="color:#FFE66D"> WaitforGround</span><span style="color:#D5CED9">()</span></div><div class="line"><span style="color:#D5CED9">    {</span></div><div class="line"><span style="color:#A0A1A7CC">        //Set gravity to 2, transform Player's Sprite Scale, and wait .05 seconds.</span></div><div class="line"><span style="color:#00E8C6">        rb</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">gravityScale</span><span style="color:#EE5D43"> =</span><span style="color:#F39C12"> 2</span><span style="color:#D5CED9">;</span></div><div class="line"><span style="color:#00E8C6">        gameObject</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">transform</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">localScale</span><span style="color:#EE5D43"> =</span><span style="color:#EE5D43"> new</span><span style="color:#FFE66D"> Vector3</span><span style="color:#D5CED9">(</span><span style="color:#F39C12">1f</span><span style="color:#D5CED9">,</span><span style="color:#F39C12">1f</span><span style="color:#D5CED9">,</span><span style="color:#F39C12">1f</span><span style="color:#D5CED9">);</span></div><div class="line"><span style="color:#C74DED">        yield</span><span style="color:#C74DED"> return</span><span style="color:#EE5D43"> new</span><span style="color:#FFE66D"> WaitForSeconds</span><span style="color:#D5CED9">(</span><span style="color:#F39C12">0.05f</span><span style="color:#D5CED9">);</span></div><div class="line"><span style="color:#00E8C6">        isGrounded</span><span style="color:#EE5D43"> =</span><span style="color:#EE5D43"> true</span><span style="color:#D5CED9">;</span></div><div class="line"><span style="color:#00E8C6">        isJumped</span><span style="color:#EE5D43"> =</span><span style="color:#EE5D43"> false</span><span style="color:#D5CED9">;</span></div><div class="line"><span style="color:#D5CED9">    }</span></div><div class="line">
+</div><div class="line"><span style="color:#FFE66D">    IEnumerator</span><span style="color:#FFE66D"> PauseGravity</span><span style="color:#D5CED9">()</span></div><div class="line"><span style="color:#D5CED9">    {</span></div><div class="line"><span style="color:#A0A1A7CC">        //Change gravity to negative JumpForce (Using Gravity to handle jumps instead of an opposing impulse force)</span></div><div class="line"><span style="color:#C74DED">        if</span><span style="color:#D5CED9">(</span><span style="color:#00E8C6">isJumped</span><span style="color:#D5CED9">)</span></div><div class="line"><span style="color:#D5CED9">        {</span></div><div class="line"><span style="color:#00E8C6">            rb</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">gravityScale</span><span style="color:#EE5D43"> =</span><span style="color:#EE5D43"> -</span><span style="color:#00E8C6">jumpForce</span><span style="color:#D5CED9">;</span></div><div class="line"><span style="color:#C74DED">            yield</span><span style="color:#C74DED"> return</span><span style="color:#EE5D43"> new</span><span style="color:#FFE66D"> WaitForSeconds</span><span style="color:#D5CED9">(</span><span style="color:#F39C12">0.2f</span><span style="color:#D5CED9">);</span></div><div class="line"><span style="color:#00E8C6">            rb</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">gravityScale</span><span style="color:#EE5D43"> =</span><span style="color:#F39C12"> 5</span><span style="color:#D5CED9">;</span></div><div class="line"><span style="color:#D5CED9">        }</span></div><div class="line">
+</div><div class="line"><span style="color:#D5CED9">    }</span></div></code></pre>
+
+<p>That is all the code needed for this basic movement system to work. 
+Provided that inputs have been set-up in the "MoveAction" section of the Player's Script Component in the inspector, the system can now be playtested.
+</p>
+
+<video width = "60%" height = "400" controls>
+    <source src="../videos/unity-movement.mp4">
+</video>
+
+<div><br><br></div>
+
+<h3 id = "demo2">Demo #2 - Coin Collection:</h3>
+
+<p>This demo is building directly off of the previous demo. 
+With movement fully functioning, it would make sense to implement some sort of target for the Player to actually move to.
+In this case, I'll be adding a Coin system in which the Player can collect a Coin and add it to their Coin Count.
+</p>
+
+<p>First, I've added and set up a Coin sprite with the tag "Coin", similarly to the Player and Ground in the last demo.</p>
+
+<img src="../images/unity_coin.png" style="width: 50%;">
+
+<p>I also wrote a script that causes the Coin to hover up and down just to give it some animated flair.</p>
+
+<pre class="andromeeda" style="background-color:#23262E;color:#D5CED9" tabindex="0"><code><div class="line"><span style="color:#C74DED">using</span><span style="color:#FFE66D"> UnityEngine</span><span style="color:#D5CED9">;</span></div><div class="line">
+</div><div class="line"><span style="color:#C74DED">public</span><span style="color:#C74DED"> class</span><span style="color:#FFE66D"> CoinObject</span><span style="color:#D5CED9"> : </span><span style="color:#FFE66D">MonoBehaviour</span></div><div class="line"><span style="color:#D5CED9">{</span></div><div class="line"><span style="color:#C74DED">    public</span><span style="color:#C74DED"> float</span><span style="color:#D5CED9"> maxHeight;</span></div><div class="line"><span style="color:#C74DED">    public</span><span style="color:#C74DED"> float</span><span style="color:#D5CED9"> minHeight;</span></div><div class="line"><span style="color:#C74DED">    bool</span><span style="color:#D5CED9"> goingUp </span><span style="color:#EE5D43">=</span><span style="color:#EE5D43"> true</span><span style="color:#D5CED9">;</span></div><div class="line">
+</div><div class="line"><span style="color:#C74DED">    void</span><span style="color:#FFE66D"> Update</span><span style="color:#D5CED9">()</span></div><div class="line"><span style="color:#D5CED9">    {</span></div><div class="line"><span style="color:#FFE66D">        Vector2</span><span style="color:#D5CED9"> position </span><span style="color:#EE5D43">=</span><span style="color:#D5CED9"> (</span><span style="color:#FFE66D">Vector2</span><span style="color:#D5CED9">)</span><span style="color:#00E8C6">transform</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">position</span><span style="color:#D5CED9">;</span></div><div class="line"><span style="color:#C74DED">        if</span><span style="color:#D5CED9">(</span><span style="color:#00E8C6">goingUp</span><span style="color:#EE5D43"> &#x26;&#x26;</span><span style="color:#00E8C6"> position</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">y</span><span style="color:#EE5D43"> &#x3C;</span><span style="color:#00E8C6"> maxHeight</span><span style="color:#D5CED9">){</span></div><div class="line"><span style="color:#00E8C6">            transform</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">position</span><span style="color:#EE5D43"> =</span><span style="color:#EE5D43"> new</span><span style="color:#FFE66D"> Vector3</span><span style="color:#D5CED9">(</span><span style="color:#00E8C6">position</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">x</span><span style="color:#D5CED9">, </span><span style="color:#00E8C6">position</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">y</span><span style="color:#EE5D43"> +</span><span style="color:#F39C12"> .0001f</span><span style="color:#D5CED9">, </span><span style="color:#F39C12">0</span><span style="color:#D5CED9">);</span></div><div class="line"><span style="color:#D5CED9">        }</span></div><div class="line">
+</div><div class="line"><span style="color:#C74DED">        else</span><span style="color:#C74DED"> if</span><span style="color:#D5CED9">(</span><span style="color:#00E8C6">position</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">y</span><span style="color:#EE5D43"> >=</span><span style="color:#00E8C6"> maxHeight</span><span style="color:#D5CED9">)</span></div><div class="line"><span style="color:#D5CED9">        {</span></div><div class="line"><span style="color:#00E8C6">            goingUp</span><span style="color:#EE5D43"> =</span><span style="color:#EE5D43"> false</span><span style="color:#D5CED9">;</span></div><div class="line"><span style="color:#D5CED9">        }</span></div><div class="line">
+</div><div class="line"><span style="color:#C74DED">        if</span><span style="color:#D5CED9">(</span><span style="color:#EE5D43">!</span><span style="color:#00E8C6">goingUp</span><span style="color:#EE5D43"> &#x26;&#x26;</span><span style="color:#00E8C6"> position</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">y</span><span style="color:#EE5D43"> ></span><span style="color:#00E8C6"> minHeight</span><span style="color:#D5CED9">)</span></div><div class="line"><span style="color:#D5CED9">        {</span></div><div class="line"><span style="color:#00E8C6">            transform</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">position</span><span style="color:#EE5D43"> =</span><span style="color:#EE5D43"> new</span><span style="color:#FFE66D"> Vector3</span><span style="color:#D5CED9">(</span><span style="color:#00E8C6">position</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">x</span><span style="color:#D5CED9">, </span><span style="color:#00E8C6">position</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">y</span><span style="color:#EE5D43"> -</span><span style="color:#F39C12"> .0001f</span><span style="color:#D5CED9">, </span><span style="color:#F39C12">0</span><span style="color:#D5CED9">);    </span></div><div class="line"><span style="color:#D5CED9">        }</span></div><div class="line">
+</div><div class="line"><span style="color:#C74DED">        else</span><span style="color:#C74DED"> if</span><span style="color:#D5CED9">(</span><span style="color:#00E8C6">position</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">y</span><span style="color:#EE5D43"> &#x3C;=</span><span style="color:#00E8C6"> minHeight</span><span style="color:#D5CED9">)</span></div><div class="line"><span style="color:#D5CED9">        {</span></div><div class="line"><span style="color:#00E8C6">            goingUp</span><span style="color:#EE5D43"> =</span><span style="color:#EE5D43"> true</span><span style="color:#D5CED9">;</span></div><div class="line"><span style="color:#D5CED9">        }</span></div><div class="line"><span style="color:#D5CED9">    }</span></div><div class="line"><span style="color:#D5CED9">}</span></div></code></pre>
+
+<p>In order for the Player to keep track of their Coin amount, I added a UI element to the Player's screen that does so.</p>
+
+<img src="../images/unity_coin-ui.png">
+
+<p>Next, the PlayerController script from the previous demo needs to modified, to account for handling the Coin collection.</p>
+
+<pre class="andromeeda" style="background-color:#23262E;color:#D5CED9" tabindex="0"><code><div class="line"><span style="color:#C74DED">using</span><span style="color:#FFE66D"> TMPro</span><span style="color:#D5CED9">;</span></div></code></pre>
+
+<p>Inside the PlayerController Class:</p>
+
+<pre class="andromeeda" style="background-color:#23262E;color:#D5CED9" tabindex="0"><code><div class="line"><span style="color:#C74DED">public</span><span style="color:#C74DED"> int</span><span style="color:#D5CED9"> Coins;</span></div><div class="line">
+</div><div class="line"><span style="color:#C74DED">private</span><span style="color:#FFE66D"> TextMeshProUGUI</span><span style="color:#D5CED9"> cointext;</span></div><div class="line">
+</div></code></pre>
+
+<p>Then, adding to the Start() function:</p>
+
+<pre class="andromeeda" style="background-color:#23262E;color:#D5CED9" tabindex="0"><code><div class="line"><span style="color:#C74DED">void</span><span style="color:#FFE66D"> Start</span><span style="color:#D5CED9">()</span></div><div class="line"><span style="color:#D5CED9">{</span></div><div class="line"><span style="color:#D5CED9">...</span></div><div class="line"><span style="color:#00E8C6">cointext</span><span style="color:#EE5D43"> =</span><span style="color:#00E8C6"> this</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">gameObject</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">transform</span><span style="color:#D5CED9">.</span><span style="color:#FFE66D">GetChild</span><span style="color:#D5CED9">(</span><span style="color:#F39C12">0</span><span style="color:#D5CED9">).</span><span style="color:#00E8C6">transform</span><span style="color:#D5CED9">.</span><span style="color:#FFE66D">GetChild</span><span style="color:#D5CED9">(</span><span style="color:#F39C12">0</span><span style="color:#D5CED9">).</span><span style="color:#00E8C6">gameObject</span><span style="color:#D5CED9">.</span><span style="color:#FFE66D">GetComponent</span><span style="color:#D5CED9">&#x3C;</span><span style="color:#FFE66D">TextMeshProUGUI</span><span style="color:#D5CED9">>();</span></div><div class="line"><span style="color:#D5CED9">}</span></div></code></pre>
+
+<p>Finally, handling the actual interaction with the Coin:</p>
+
+<pre class="andromeeda" style="background-color:#23262E;color:#D5CED9" tabindex="0"><code><div class="line"><span style="color:#C74DED">if</span><span style="color:#D5CED9">(</span><span style="color:#00E8C6">collision</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">gameObject</span><span style="color:#D5CED9">.</span><span style="color:#FFE66D">CompareTag</span><span style="color:#D5CED9">(</span><span style="color:#96E072">"Coin"</span><span style="color:#D5CED9">))</span></div><div class="line"><span style="color:#D5CED9">        {</span></div><div class="line"><span style="color:#00E8C6">            Coins</span><span style="color:#EE5D43"> +=</span><span style="color:#F39C12"> 1</span><span style="color:#D5CED9">;</span></div><div class="line"><span style="color:#FFE66D">            Destroy</span><span style="color:#D5CED9">(</span><span style="color:#00E8C6">collision</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">gameObject</span><span style="color:#D5CED9">);</span></div><div class="line"><span style="color:#00E8C6">            cointext</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">text</span><span style="color:#EE5D43"> =</span><span style="color:#96E072"> "Coins: "</span><span style="color:#EE5D43"> +</span><span style="color:#00E8C6"> Coins</span><span style="color:#D5CED9">;</span></div><div class="line"><span style="color:#D5CED9">        }</span></div></code></pre>
+
+<p>With the code completed, the Coin collection system is ready to be playtested.</p>
+
+<video width = "60%" height = "400" controls>
+    <source src="../videos/unity-coin.mp4">
+</video>
+
+<div><br><br></div>
+
+<h3 id = "demo3">Demo #3 - Spike Obstacle:</h3>
+
+<p>The final demo is adding the last piece of this simple platforming game, implementing a spike obstacle that can deal damage to the player,
+as well as a health system for the Player and handling a Gameover if the Player runs out of health.
+</p>
+
+<p>Once again, the first step is adding and setting up a sprite that will be used for the spike itself. 
+I've given it a generic "Damage" tag, since there could potentially be other sources of damage in this "game" aside from this spike.</p>
+
+<img src="../images/unity_spike.png" style="width:40%;">
+
+<p>Next, I've created another UI element for keeping track of the Player's health</p>
+
+<img src="../images/unity_health-ui.png">
+
+<p>There isn't any code needed within the Spike object, but the PlayerController script does need to be updated again to handle collision with
+damage sources and a health system.
+</p>
+
+<p>Inside the PlayerController Class:</p>
+
+<pre class="andromeeda" style="background-color:#23262E;color:#D5CED9" tabindex="0"><code><div class="line"><span style="color:#C74DED">private</span><span style="color:#FFE66D"> TextMeshProUGUI</span><span style="color:#D5CED9"> healthtext;</span></div><div class="line"><span style="color:#C74DED">private</span><span style="color:#FFE66D"> TextMeshProUGUI</span><span style="color:#D5CED9"> gameover;</span></div></code></pre>
+
+<p>Final addition to the Start() function:</p>
+
+<pre class="andromeeda" style="background-color:#23262E;color:#D5CED9" tabindex="0"><code><div class="line"><span style="color:#00E8C6">healthtext</span><span style="color:#EE5D43"> =</span><span style="color:#00E8C6"> this</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">gameObject</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">transform</span><span style="color:#D5CED9">.</span><span style="color:#FFE66D">GetChild</span><span style="color:#D5CED9">(</span><span style="color:#F39C12">0</span><span style="color:#D5CED9">).</span><span style="color:#00E8C6">transform</span><span style="color:#D5CED9">.</span><span style="color:#FFE66D">GetChild</span><span style="color:#D5CED9">(</span><span style="color:#F39C12">1</span><span style="color:#D5CED9">).</span><span style="color:#00E8C6">gameObject</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">GetComponent</span><span style="color:#EE5D43">&#x3C;</span><span style="color:#FFE66D">TextMeshProUGUI</span><span style="color:#D5CED9">();</span></div><div class="line"><span style="color:#00E8C6">gameover</span><span style="color:#EE5D43"> =</span><span style="color:#00E8C6"> this</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">gameObject</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">transform</span><span style="color:#D5CED9">.</span><span style="color:#FFE66D">GetChild</span><span style="color:#D5CED9">(</span><span style="color:#F39C12">0</span><span style="color:#D5CED9">).</span><span style="color:#00E8C6">transform</span><span style="color:#D5CED9">.</span><span style="color:#FFE66D">GetChild</span><span style="color:#D5CED9">(</span><span style="color:#F39C12">2</span><span style="color:#D5CED9">).</span><span style="color:#00E8C6">gameObject</span><span style="color:#D5CED9">.</span><span style="color:#FFE66D">GetComponent</span><span style="color:#D5CED9">&#x3C;</span><span style="color:#FFE66D">TextMeshProUGUI</span><span style="color:#D5CED9">>();  </span></div><div class="line"><span style="color:#00E8C6">healthtext</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">text</span><span style="color:#EE5D43"> =</span><span style="color:#96E072"> "Health: "</span><span style="color:#EE5D43"> +</span><span style="color:#00E8C6"> Health</span><span style="color:#D5CED9">;</span></div></code></pre>
+
+<p>A new condition inside of the Update() function:</p>
+
+<pre class="andromeeda" style="background-color:#23262E;color:#D5CED9" tabindex="0"><code><div class="line"><span style="color:#C74DED">if</span><span style="color:#D5CED9">(</span><span style="color:#00E8C6">Health</span><span style="color:#EE5D43"> &#x3C;=</span><span style="color:#F39C12"> 0</span><span style="color:#D5CED9">)</span></div><div class="line"><span style="color:#D5CED9">        {</span></div><div class="line"><span style="color:#00E8C6">            spr</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">color</span><span style="color:#EE5D43"> =</span><span style="color:#EE5D43"> new</span><span style="color:#FFE66D"> Color</span><span style="color:#D5CED9">(</span><span style="color:#F39C12">0f</span><span style="color:#D5CED9">,</span><span style="color:#F39C12">0f</span><span style="color:#D5CED9">,</span><span style="color:#F39C12">0f</span><span style="color:#D5CED9">,</span><span style="color:#F39C12">0f</span><span style="color:#D5CED9">);</span></div><div class="line"><span style="color:#00E8C6">            gameover</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">text</span><span style="color:#EE5D43"> =</span><span style="color:#96E072"> "Game Over!"</span><span style="color:#D5CED9">;</span></div><div class="line"><span style="color:#00E8C6">            healthtext</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">text</span><span style="color:#EE5D43"> =</span><span style="color:#96E072"> ""</span><span style="color:#D5CED9">;</span></div><div class="line"><span style="color:#00E8C6">            cointext</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">text</span><span style="color:#EE5D43"> =</span><span style="color:#96E072"> ""</span><span style="color:#D5CED9">;</span></div><div class="line"><span style="color:#D5CED9">        }</span></div></code></pre>
+
+<p>Another collision detection function for when the Player interacts with a damage source:</p>
+
+<pre class="andromeeda" style="background-color:#23262E;color:#D5CED9" tabindex="0"><code><div class="line"><span style="color:#C74DED">private</span><span style="color:#C74DED"> bool</span><span style="color:#D5CED9"> iFrames </span><span style="color:#EE5D43">=</span><span style="color:#EE5D43"> false</span><span style="color:#D5CED9">;</span></div><div class="line"><span style="color:#C74DED">if</span><span style="color:#D5CED9">(</span><span style="color:#00E8C6">collision</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">gameObject</span><span style="color:#D5CED9">.</span><span style="color:#FFE66D">CompareTag</span><span style="color:#D5CED9">(</span><span style="color:#96E072">"Damage"</span><span style="color:#D5CED9">))</span></div><div class="line"><span style="color:#D5CED9">        {</span></div><div class="line"><span style="color:#C74DED">            if</span><span style="color:#D5CED9">(</span><span style="color:#EE5D43">!</span><span style="color:#00E8C6">iFrames</span><span style="color:#D5CED9">)</span></div><div class="line"><span style="color:#D5CED9">            {</span></div><div class="line"><span style="color:#00E8C6">                Health</span><span style="color:#EE5D43"> -=</span><span style="color:#F39C12"> 1</span><span style="color:#D5CED9">;</span></div><div class="line"><span style="color:#00E8C6">                iFrames</span><span style="color:#EE5D43"> =</span><span style="color:#EE5D43"> true</span><span style="color:#D5CED9">;</span></div><div class="line"><span style="color:#00E8C6">                healthtext</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">text</span><span style="color:#EE5D43"> =</span><span style="color:#96E072"> "Health: "</span><span style="color:#EE5D43"> +</span><span style="color:#00E8C6"> Health</span><span style="color:#D5CED9">;</span></div><div class="line"><span style="color:#C74DED">                if</span><span style="color:#D5CED9">(</span><span style="color:#00E8C6">Health</span><span style="color:#EE5D43"> ></span><span style="color:#F39C12"> 0</span><span style="color:#D5CED9">)</span></div><div class="line"><span style="color:#D5CED9">                {</span></div><div class="line"><span style="color:#FFE66D">                    StartCoroutine</span><span style="color:#D5CED9">(</span><span style="color:#FFE66D">IFrames</span><span style="color:#D5CED9">());</span></div><div class="line"><span style="color:#D5CED9">                }</span></div><div class="line"><span style="color:#D5CED9">            }</span></div><div class="line"><span style="color:#D5CED9">        }</span></div></code></pre>
+
+<p>Note the IFrames Coroutine, which stands for Invincibility Frames. The reason for this addition is so that the Player is given a short cooldown before they can take damage again.
+This prevents the same source of damage from hitting the Player several times and taking away all of their health immediately.
+I've also made it so that the Player sprite flashes during this cooldown as a visual indicator.
+</p>
+
+<pre class="andromeeda" style="background-color:#23262E;color:#D5CED9" tabindex="0"><code><div class="line"><span style="color:#FFE66D">IEnumerator</span><span style="color:#FFE66D"> IFrames</span><span style="color:#D5CED9">()</span></div><div class="line"><span style="color:#D5CED9">    {</span></div><div class="line"><span style="color:#C74DED">        for</span><span style="color:#D5CED9">(</span><span style="color:#C74DED">int</span><span style="color:#D5CED9"> i </span><span style="color:#EE5D43">=</span><span style="color:#F39C12"> 0</span><span style="color:#D5CED9">; </span><span style="color:#00E8C6">i</span><span style="color:#EE5D43"> &#x3C;</span><span style="color:#F39C12"> 5</span><span style="color:#D5CED9">; </span><span style="color:#00E8C6">i</span><span style="color:#EE5D43"> +=</span><span style="color:#F39C12"> 1</span><span style="color:#D5CED9">)</span></div><div class="line"><span style="color:#D5CED9">        {</span></div><div class="line"><span style="color:#00E8C6">            spr</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">color</span><span style="color:#EE5D43"> =</span><span style="color:#EE5D43"> new</span><span style="color:#FFE66D"> Color</span><span style="color:#D5CED9">(</span><span style="color:#F39C12">0f</span><span style="color:#D5CED9">,</span><span style="color:#F39C12">0f</span><span style="color:#D5CED9">,</span><span style="color:#F39C12">0f</span><span style="color:#D5CED9">,</span><span style="color:#F39C12">0f</span><span style="color:#D5CED9">);</span></div><div class="line"><span style="color:#C74DED">            yield</span><span style="color:#C74DED"> return</span><span style="color:#EE5D43"> new</span><span style="color:#FFE66D"> WaitForSeconds</span><span style="color:#D5CED9">(</span><span style="color:#F39C12">0.2f</span><span style="color:#D5CED9">);</span></div><div class="line"><span style="color:#00E8C6">            spr</span><span style="color:#D5CED9">.</span><span style="color:#00E8C6">color</span><span style="color:#EE5D43"> =</span><span style="color:#EE5D43"> new</span><span style="color:#FFE66D"> Color</span><span style="color:#D5CED9">(</span><span style="color:#F39C12">0.1598351f</span><span style="color:#D5CED9">,</span><span style="color:#F39C12">1f</span><span style="color:#D5CED9">,</span><span style="color:#F39C12">0f</span><span style="color:#D5CED9">,</span><span style="color:#F39C12">1f</span><span style="color:#D5CED9">);</span></div><div class="line"><span style="color:#C74DED">            yield</span><span style="color:#C74DED"> return</span><span style="color:#EE5D43"> new</span><span style="color:#FFE66D"> WaitForSeconds</span><span style="color:#D5CED9">(</span><span style="color:#F39C12">0.2f</span><span style="color:#D5CED9">);</span></div><div class="line"><span style="color:#D5CED9">        }</span></div><div class="line"><span style="color:#00E8C6">        iFrames</span><span style="color:#EE5D43"> =</span><span style="color:#EE5D43"> false</span><span style="color:#D5CED9">;</span></div><div class="line"><span style="color:#D5CED9">    }</span></div></code></pre>
+
+<p>Finally, let's playtest the new additions together with the additions from the previous demos.</p>
+
+<video width = "60%" height = "400" controls>
+    <source src="../videos/unity-spikes.mp4">
+</video>
+
+<div><br><br></div>
+
+</div>
+
+<button type="button" class="top" onclick="window.location.href='#';">Back to Top</button>
